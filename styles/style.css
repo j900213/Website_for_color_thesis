@@ -103,8 +103,6 @@ span.magic-btn-blue {
 
 span.magic-btn-blue:hover {
   color: #fff;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
   -webkit-transition-delay: 0.11s;
           transition-delay: 0.11s;
 }
@@ -145,8 +143,6 @@ span.magic-btn-brown {
 
 span.magic-btn-brown:hover {
   color: #fff;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
   -webkit-transition-delay: 0.11s;
           transition-delay: 0.11s;
 }
