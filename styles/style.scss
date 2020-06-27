@@ -17,7 +17,7 @@ p {
   font-size: 1.8rem;
   line-height: 2.2;
   letter-spacing: 0.5px;
-  z-index: 3;
+  z-index: 2;
   position: relative;
   margin-bottom: 2.5rem;
 }
@@ -53,7 +53,7 @@ span {
   text-decoration: none;
   position: relative;
   cursor: pointer;
-  z-index: 3;
+  z-index: 2;
 
   &.magic-box {
     display: inline-block;
@@ -69,9 +69,9 @@ span {
   &.magic-box::before {
     content: " ";
     position: absolute;
-    bottom: 0;
-    left: -2px;
-    padding: 0 2px;
+    bottom: 5px;
+    left: -1px;
+    padding: -10px 2px;
     width: calc(100% + 2px);
     height: 1px;
     transition: 0.4s;
@@ -85,35 +85,31 @@ span {
 // Color - underline
 span {
   &.color-1::before {
-    border-bottom: 1px solid #0c4842;
+    border-bottom: 2px solid #0c4842;
   }
   &.color-2::before {
-    border-bottom: 1px solid #32a5b7;
+    border-bottom: 2px solid #32a5b7;
   }
   &.color-3::before {
-    border-bottom: 1px solid #a5dde3;
+    border-bottom: 2px solid #a5dde3;
   }
   &.color-4::before {
-    border-bottom: 1px solid #66b9b5;
+    border-bottom: 2px solid #66b9b5;
   }
+}
+
+// Outer span - magic fade
+.magic-fade::after {
+  z-index: 3;
+  animation: dot-fade 2s ease-in-out forwards 0.5s;
 }
 
 // Javascript Action
-.magic-show::after {
+.bgcolor::after {
   position: absolute;
-  left: 50%;
-  bottom: 50%;
-  transform: translate(-50%, 50%);
-  z-index: 10;
-}
-
-.magic-fade::after {
-  position: absolute;
-  left: 50%;
-  bottom: 50%;
-  transform: translate(-50%, 50%);
-  z-index: 10;
-  animation: dot-fade 2s ease-in-out forwards 0.5s;
+  left: 0;
+  bottom: 0;
+  transform: translate(-38%, 50%);
 }
 
 .bgcolor-1::after {
