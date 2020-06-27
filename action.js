@@ -1,24 +1,33 @@
 // DOM Selector
-const targetblue = document.querySelector(".magic-btn-blue");
-const targetbrown = document.querySelector(".magic-btn-brown");
+const target = document.querySelectorAll(".magic-box");
 
 // Event Listener
-targetblue.addEventListener("mouseenter", function () {
-  targetblue.classList.remove("magic-fade-blue");
-  targetblue.classList.add("magic-show-blue");
-});
+for (let i = 0; i < target.length; i++) {
+  // Add bg when hovering
+  target[i].addEventListener("mouseenter", function () {
+    target[i].classList.remove("magic-fade");
+    target[i].classList.add("magic-show");
+    switch (i + 1) {
+      case 1:
+        target[i].classList.add("bgcolor-1");
+        break;
+      case 2:
+        target[i].classList.add("bgcolor-2");
+        break;
+      case 3:
+        target[i].classList.add("bgcolor-3");
+        break;
+      case 4:
+        target[i].classList.add("bgcolor-4");
+        break;
+      default:
+        break;
+    }
+  });
 
-targetblue.addEventListener("mouseleave", function () {
-  targetblue.classList.remove("magic-show-blue");
-  targetblue.classList.add("magic-fade-blue");
-});
-
-targetbrown.addEventListener("mouseenter", function () {
-  targetbrown.classList.remove("magic-fade-brown");
-  targetbrown.classList.add("magic-show-brown");
-});
-
-targetbrown.addEventListener("mouseleave", function () {
-  targetbrown.classList.remove("magic-show-brown");
-  targetbrown.classList.add("magic-fade-brown");
-});
+  // Add fade out animation when mouse out
+  target[i].addEventListener("mouseleave", function () {
+    target[i].classList.add("magic-fade");
+    target[i].classList.remove("magic-show");
+  });
+}

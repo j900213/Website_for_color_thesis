@@ -6,7 +6,7 @@
 
 html {
   font-size: 62.5%;
-  font-family: "Poppins", sans-serif;
+  font-family: "Playfair Display", serif;
 }
 
 h1 {
@@ -14,11 +14,12 @@ h1 {
 }
 
 p {
-  font-size: 2rem;
-  line-height: 2;
+  font-size: 1.8rem;
+  line-height: 2.2;
   letter-spacing: 0.5px;
-  z-index: 10;
+  z-index: 3;
   position: relative;
+  margin-bottom: 2.5rem;
 }
 
 .main-wrapper {
@@ -28,10 +29,12 @@ p {
   align-items: center;
   justify-content: center;
   transition: all 0.4s ease-in-out;
+  width: 50%;
+  margin: auto;
 }
 
 .title-wrapper {
-  min-height: 10vh;
+  min-height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,126 +43,93 @@ p {
 .body-wrapper {
   min-height: 20vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+// Global Property - Magic Box
 span {
   text-decoration: none;
   position: relative;
   cursor: pointer;
-  z-index: -1;
+  z-index: 3;
 
-  &.magic-btn-blue::before {
+  &.magic-box {
+    display: inline-block;
+    transition: 0.3s;
+    transition-delay: 0s;
+  }
+
+  &.magic-box:hover {
+    color: #fff;
+    transition-delay: 0.11s;
+  }
+
+  &.magic-box::before {
     content: " ";
     position: absolute;
     bottom: 0;
     left: -2px;
     padding: 0 2px;
-
     width: calc(100% + 2px);
     height: 1px;
-    border-bottom: 1px solid #086ef3;
-    // border-bottom: 1px solid #907358;
-
     transition: 0.4s;
   }
 
-  &.magic-btn-blue:hover::before {
+  &.magic-box:hover::before {
     border-color: transparent;
-  }
-
-  &.magic-btn-blue {
-    display: inline-block;
-
-    transition: 0.3s;
-    transition-delay: 0s;
-    transform: scale(1);
-  }
-
-  &.magic-btn-blue:hover {
-    color: #fff;
-    //transform: scale(1.2);
-    transition-delay: 0.11s;
   }
 }
 
+// Color - underline
 span {
-  text-decoration: none;
-  position: relative;
-  cursor: pointer;
-  z-index: -1;
-
-  &.magic-btn-brown::before {
-    content: " ";
-    position: absolute;
-    bottom: 0;
-    left: -2px;
-    padding: 0 2px;
-
-    width: calc(100% + 2px);
-    height: 1px;
-    border-bottom: 1px solid #907358;
-
-    transition: 0.4s;
+  &.color-1::before {
+    border-bottom: 1px solid #0c4842;
   }
-
-  &.magic-btn-brown:hover::before {
-    border-color: transparent;
+  &.color-2::before {
+    border-bottom: 1px solid #32a5b7;
   }
-
-  &.magic-btn-brown {
-    display: inline-block;
-
-    transition: 0.3s;
-    transition-delay: 0s;
-    transform: scale(1);
+  &.color-3::before {
+    border-bottom: 1px solid #a5dde3;
   }
-
-  &.magic-btn-brown:hover {
-    color: #fff;
-    //transform: scale(1.2);
-    transition-delay: 0.11s;
+  &.color-4::before {
+    border-bottom: 1px solid #66b9b5;
   }
 }
 
 // Javascript Action
-.magic-show-blue::after {
-  content: url(../BLUE.png);
+.magic-show::after {
   position: absolute;
   left: 50%;
   bottom: 50%;
   transform: translate(-50%, 50%);
-  z-index: -3;
+  z-index: 10;
 }
 
-.magic-fade-blue::after {
-  content: url(../BLUE.png);
+.magic-fade::after {
   position: absolute;
   left: 50%;
   bottom: 50%;
   transform: translate(-50%, 50%);
-  z-index: -3;
+  z-index: 10;
   animation: dot-fade 2s ease-in-out forwards 0.5s;
 }
 
-.magic-show-brown::after {
-  content: url(../BROWN.png);
-  position: absolute;
-  left: 50%;
-  bottom: 50%;
-  transform: translate(-50%, 50%);
-  z-index: -3;
+.bgcolor-1::after {
+  content: url(../circleImg/PNG/color1.png);
 }
 
-.magic-fade-brown::after {
-  content: url(../BROWN.png);
-  position: absolute;
-  left: 50%;
-  bottom: 50%;
-  transform: translate(-50%, 50%);
-  z-index: -3;
-  animation: dot-fade 2s ease-in-out forwards 0.5s;
+.bgcolor-2::after {
+  content: url(../circleImg/PNG/color2.png);
+}
+
+.bgcolor-3::after {
+  content: url(../circleImg/PNG/color3.png);
+}
+
+.bgcolor-4::after {
+  content: url(../circleImg/PNG/color4.png);
 }
 
 // Animation
