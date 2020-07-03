@@ -10,8 +10,16 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  font-family: "Arvo", serif;
+  background: #fffef7;
+  position: relative;
+  overflow-x: hidden;
+}
+
 .main-section {
-  min-height: 150vh;
+  min-height: 100vh;
+  position: relative;
 }
 
 .main-header {
@@ -29,14 +37,25 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
   min-height: 20vh;
+  width: 90%;
+  margin: auto;
+  z-index: 10;
 }
 
 .main-title {
-  font-size: 4rem;
+  font-size: 2.4rem;
+  font-weight: 300;
+  margin: 3rem 0rem 2rem 0rem;
 }
 
-.nav-chapter {
-  font-size: 3rem;
+.nav-chapter-no {
+  font-size: 2.4rem;
+}
+
+.nav-chapter-name {
+  font-size: 4.2rem;
+  text-decoration: none;
+  color: black;
 }
 
 .side-link-wrapper {
@@ -49,22 +68,151 @@ html {
   position: fixed;
   left: 0%;
   top: 50%;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .right-link {
   position: fixed;
   right: 0%;
   top: 50%;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .left-link a,
 .right-link a {
   text-decoration: none;
   color: black;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+.bg-front-wrapper {
+  margin-top: -200vh;
+  margin-bottom: -200vh;
+  -webkit-transform: scale(0.55);
+          transform: scale(0.55);
+  z-index: -1;
+}
+
+.abstract-section {
+  min-height: 80vh;
+  width: 85%;
+  margin: auto;
+  border: solid rgba(0, 0, 0, 0.3);
+  border-width: 2px 0px;
+  padding: 5rem 25vw 2rem 0vw;
+}
+
+.chapter-title {
+  font-size: 1.7rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+}
+
+.para-text {
+  font-size: 1.7rem;
+  font-weight: 100;
+  line-height: 3.5rem;
+}
+
+.chapter-1-section {
+  width: 85%;
+  margin: auto;
+  padding: 5rem 0vw 2rem 0vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.para-div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.para-div .para-text {
+  text-indent: 10rem;
+  margin: 1.7rem 0rem;
+}
+
+.refer-div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.refer-left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30rem;
+          flex: 1 1 30rem;
+  padding-right: 3rem;
+}
+
+.refer-middle {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30rem;
+          flex: 1 1 30rem;
+  padding-right: 3rem;
+}
+
+.refer-right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30rem;
+          flex: 1 1 30rem;
+  padding-right: 3rem;
+}
+
+.refer-num {
+  font-size: 1.1rem;
+}
+
+.refer-content {
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+
+.refer-footer-num {
+  font-size: 1.2rem;
+}
+
+.footer-red {
+  color: #ff0000;
+}
+
+#no-1-refer {
+  position: relative;
+  top: 12rem;
+}
+
+#no-2-refer {
+  position: relative;
+  top: 65rem;
+}
+
+#no-3-refer {
+  position: relative;
+  top: 80rem;
+}
+
+#no-4-refer {
+  position: relative;
+  top: 180rem;
+}
+
+#no-5-refer {
+  position: relative;
+  top: 185rem;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,79 @@
+.chapter-1-section {
+  width: 85%;
+  margin: auto;
+  padding: 5rem 0vw 2rem 0vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+.para-div {
+  flex: 1 1 40rem;
+  & .para-text {
+    text-indent: 10rem;
+    margin: 1.7rem 0rem;
+  }
+}
+
+.refer-div {
+  flex: 1 1 40rem;
+  display: flex;
+}
+
+.refer-left {
+  flex: 1 1 30rem;
+  padding-right: 3rem;
+}
+
+.refer-middle {
+  flex: 1 1 30rem;
+  padding-right: 3rem;
+}
+
+.refer-right {
+  flex: 1 1 30rem;
+  padding-right: 3rem;
+}
+
+.refer-num {
+  font-size: 1.1rem;
+}
+
+.refer-content {
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+
+.refer-footer-num {
+  font-size: 1.2rem;
+}
+
+.footer-red {
+  color: #ff0000;
+}
+
+// Refer id control
+#no-1-refer {
+  position: relative;
+  top: 12rem;
+}
+
+#no-2-refer {
+  position: relative;
+  top: 65rem;
+}
+
+#no-3-refer {
+  position: relative;
+  top: 80rem;
+}
+
+#no-4-refer {
+  position: relative;
+  top: 180rem;
+}
+
+#no-5-refer {
+  position: relative;
+  top: 185rem;
+}
