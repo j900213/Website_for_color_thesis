@@ -101,7 +101,7 @@ body {
   width: 85%;
   margin: auto;
   border: solid rgba(0, 0, 0, 0.3);
-  border-width: 2px 0px;
+  border-width: 2px 0px 0px 0px;
   padding: 5rem 25vw 2rem 0vw;
 }
 
@@ -117,31 +117,19 @@ body {
   line-height: 3.5rem;
 }
 
-.chapter-1-section {
+.chapter-section {
+  position: relative;
   width: 85%;
   margin: auto;
-  padding: 5rem 0vw 2rem 0vw;
+  padding: 3rem 0vw 2rem 0vw;
+  border: solid rgba(0, 0, 0, 0.3);
+  border-width: 2px 0px 0px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
-.para-div {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 40rem;
-          flex: 1 1 40rem;
-}
-
-.para-div .para-text {
-  text-indent: 10rem;
-  margin: 1.7rem 0rem;
 }
 
 .refer-div {
@@ -153,25 +141,12 @@ body {
   display: flex;
 }
 
-.refer-left {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 30rem;
-          flex: 1 1 30rem;
-  padding-right: 3rem;
-}
-
-.refer-middle {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 30rem;
-          flex: 1 1 30rem;
-  padding-right: 3rem;
-}
-
+.refer-left,
+.refer-middle,
 .refer-right {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 30rem;
           flex: 1 1 30rem;
-  padding-right: 3rem;
 }
 
 .refer-num {
@@ -187,10 +162,127 @@ body {
   font-size: 1.2rem;
 }
 
+.para-div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.para-div .para-text {
+  text-indent: 10rem;
+  margin: 1rem 0rem;
+}
+
+.quote-text {
+  font-style: italic;
+  padding: 0rem 10rem;
+  font-size: 1.7rem;
+  font-weight: 100;
+  line-height: 3.5rem;
+  margin: 2.4rem 0rem;
+}
+
+.quote-sign {
+  font-style: italic;
+  padding: 0rem 10rem;
+  margin-top: -3rem;
+  margin-bottom: 2.4rem;
+  font-size: 1.7rem;
+  font-weight: 100;
+  line-height: 3.5rem;
+  text-align: right;
+}
+
+.ellipses {
+  font-style: normal;
+}
+
+/*--- Chapter on the Right handed side ---*/
+.chapter-1,
+.chapter-3 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.chapter-1 .refer-div .refer-right,
+.chapter-3 .refer-div .refer-right {
+  padding-right: 3rem;
+}
+
+.chapter-1 .refer-div .refer-middle,
+.chapter-3 .refer-div .refer-middle {
+  padding-right: 3rem;
+}
+
+.chapter-1 .refer-div .refer-left,
+.chapter-3 .refer-div .refer-left {
+  padding-right: 3rem;
+}
+
+/*--- Chapter on the Left handed side ---*/
+.chapter-2 {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.chapter-2 .refer-div .refer-right {
+  padding-left: 3rem;
+}
+
+.chapter-2 .refer-div .refer-middle {
+  padding-left: 3rem;
+}
+
+.chapter-2 .refer-div .refer-left {
+  padding-left: 3rem;
+}
+
+/*--- Background IMG---*/
+.bg-ch2-wrapper {
+  position: absolute;
+  right: -200rem;
+  top: -45%;
+  -webkit-transform: scale(0.55);
+          transform: scale(0.55);
+  z-index: -10;
+}
+
+.bg-ch3-wrapper-1 {
+  position: absolute;
+  left: -280rem;
+  top: -80%;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  z-index: -10;
+}
+
+.bg-ch3-wrapper-2 {
+  position: absolute;
+  left: -260rem;
+  top: -20%;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  z-index: -10;
+}
+
+/*--- Footer Color Control ---*/
 .footer-red {
   color: #ff0000;
 }
 
+.footer-orange {
+  color: #ff9d00;
+}
+
+.footer-green {
+  color: #00e659;
+}
+
+/*--- Reference ID Control ---*/
 #no-1-refer {
   position: relative;
   top: 12rem;
@@ -198,21 +290,76 @@ body {
 
 #no-2-refer {
   position: relative;
-  top: 65rem;
+  top: 80rem;
 }
 
 #no-3-refer {
   position: relative;
-  top: 80rem;
+  top: 95rem;
 }
 
 #no-4-refer {
   position: relative;
-  top: 180rem;
+  top: 195rem;
 }
 
 #no-5-refer {
   position: relative;
-  top: 185rem;
+  top: 200rem;
+}
+
+#no-6-refer {
+  position: relative;
+  top: 20rem;
+}
+
+#no-7-refer {
+  position: relative;
+  top: 52rem;
+}
+
+#no-8-refer {
+  position: relative;
+  top: 125rem;
+}
+
+#no-9-refer {
+  position: relative;
+  top: 120rem;
+}
+
+#no-10-refer {
+  position: relative;
+  top: 145rem;
+}
+
+#no-11-refer {
+  position: relative;
+  top: 195rem;
+}
+
+#no-12-refer {
+  position: relative;
+  top: 15rem;
+}
+
+#no-13-refer {
+  position: relative;
+  top: 62rem;
+}
+
+#no-14-refer {
+  position: relative;
+  top: 68rem;
+}
+
+#no-15-refer {
+  position: relative;
+  top: 77rem;
+}
+
+#no-16-refer {
+  position: relative;
+  top: 193rem;
 }
 /*# sourceMappingURL=style.css.map */
