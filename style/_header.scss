@@ -95,3 +95,19 @@
   transform: scale(0.55);
   z-index: -1;
 }
+
+/*--- Responsive ---*/
+@media screen and (max-width: 1024px) {
+  .main-section {
+    padding: 0rem 5rem;
+  }
+  .nav-wrapper {
+    padding-top: 8%;
+  }
+  .nav-chapter-wrapper {
+    display: block;
+  }
+  .bg-front-wrapper {
+    margin-top: -205rem;
+  }
+}

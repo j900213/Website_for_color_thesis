@@ -65,6 +65,10 @@
   font-style: normal;
 }
 
+#reference {
+  display: none;
+}
+
 /*--- Chapter on the Right handed side ---*/
 #chapter-1,
 #chapter-3,
@@ -119,6 +123,10 @@
 }
 
 /*--- Background IMG---*/
+.bg-tablet {
+  display: none;
+}
+
 .bg-ch2-wrapper {
   position: absolute;
   right: -200rem;
@@ -195,6 +203,14 @@
   position: absolute;
   right: -65rem;
   bottom: -40rem;
+  transform: scale(0.5);
+  z-index: -10;
+}
+
+.bg-conclusion-wrapper-2-tab {
+  position: absolute;
+  right: -190rem;
+  bottom: -170rem;
   transform: scale(0.5);
   z-index: -10;
 }
@@ -523,4 +539,45 @@
 #no-62-refer {
   position: relative;
   top: 80.5%;
+}
+
+/*-------------------*/
+/*--- Responsive ----*/
+/*-------------------*/
+
+@media screen and (max-width: 1024px) {
+  .chapter-section {
+    width: 80%;
+  }
+
+  .refer-div {
+    display: none;
+  }
+
+  .bg-tablet {
+    display: block;
+  }
+
+  /*--- Reference ----*/
+
+  #reference {
+    display: block;
+  }
+
+  .reference-grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+  }
+
+  .refer-title {
+    font-size: 1.3rem;
+    font-weight: 100;
+  }
+
+  .refer-tablet div {
+    position: !important;
+    top: 0 !important;
+    margin-top: 1rem;
+  }
 }
