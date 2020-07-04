@@ -66,15 +66,15 @@
 }
 
 /*--- Chapter on the Right handed side ---*/
-.chapter-1,
-.chapter-3,
-.chapter-5 {
+#chapter-1,
+#chapter-3,
+#chapter-5 {
   flex-direction: row-reverse;
 }
 
-.chapter-1,
-.chapter-3,
-.chapter-5 {
+#chapter-1,
+#chapter-3,
+#chapter-5 {
   & .refer-div .refer-right {
     padding-right: 3rem;
   }
@@ -87,13 +87,15 @@
 }
 
 /*--- Chapter on the Left handed side ---*/
-.chapter-2,
-.chapter-4 {
+#chapter-2,
+#chapter-4,
+#conclusion {
   flex-direction: row;
 }
 
-.chapter-2,
-.chapter-4 {
+#chapter-2,
+#chapter-4,
+#conclusion {
   & .refer-div .refer-right {
     padding-left: 3rem;
   }
@@ -102,6 +104,17 @@
   }
   & .refer-div .refer-left {
     padding-left: 3rem;
+  }
+}
+
+/*--- Conclusion ---*/
+#conclusion {
+  & .para-div {
+    flex: 4 1 40rem;
+  }
+
+  & .refer-div {
+    flex: 1 1 40rem;
   }
 }
 
@@ -170,6 +183,22 @@
   z-index: -10;
 }
 
+.bg-conclusion-wrapper-1 {
+  position: absolute;
+  right: -180rem;
+  top: -150rem;
+  transform: scale(0.5);
+  z-index: -10;
+}
+
+.bg-conclusion-wrapper-2 {
+  position: absolute;
+  right: -60rem;
+  bottom: -40rem;
+  transform: scale(0.5);
+  z-index: -10;
+}
+
 /*--- Footer Color Control ---*/
 .footer-red {
   color: #ff0000;
@@ -187,8 +216,12 @@
   color: #3c71ff;
 }
 
-.footer-purple {
+.footer-grey {
   color: #b7b6b6;
+}
+
+.footer-purple {
+  color: #d958ff;
 }
 
 /*--- Reference ID Control ---*/
@@ -430,4 +463,69 @@
 #no-47-refer {
   position: relative;
   top: 404rem;
+}
+
+#no-48-refer {
+  position: relative;
+  top: 48rem;
+}
+
+#no-49-refer {
+  position: relative;
+  top: 53rem;
+}
+
+#no-50-refer {
+  position: relative;
+  top: 73rem;
+}
+
+#no-51-refer {
+  position: relative;
+  top: 75rem;
+}
+
+#no-52-refer {
+  position: relative;
+  top: 85rem;
+}
+
+#no-53-refer {
+  position: relative;
+  top: 87rem;
+}
+
+#no-54-refer {
+  position: relative;
+  top: 142rem;
+}
+
+#no-55-refer {
+  position: relative;
+  top: 154rem;
+}
+
+#no-56-refer {
+  position: relative;
+  top: 163rem;
+}
+
+#no-57-refer {
+  position: relative;
+  top: 197rem;
+}
+
+#no-60-refer {
+  position: relative;
+  top: 207rem;
+}
+
+#no-61-refer {
+  position: relative;
+  top: 210rem;
+}
+
+#no-62-refer {
+  position: relative;
+  top: 213rem;
 }
