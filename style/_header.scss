@@ -1,5 +1,5 @@
 .main-section {
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
 }
 
@@ -90,7 +90,7 @@
 /* --- Background ---*/
 
 .bg-front-wrapper {
-  margin-top: -200vh;
+  margin-top: -185rem;
   margin-bottom: -200vh;
   transform: scale(0.55);
   z-index: -1;
