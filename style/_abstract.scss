@@ -18,3 +18,10 @@
   font-weight: 100;
   line-height: 3.5rem;
 }
+
+@media screen and (max-width: 1024px) {
+  .abstract-section {
+    width: 80%;
+    padding: 5rem 0vw 2rem 0vw;
+  }
+}
