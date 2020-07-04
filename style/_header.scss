@@ -14,6 +14,8 @@
   z-index: 10;
 }
 
+/*--- Navigation Head ---*/
+
 .main-title {
   font-size: 2.4rem;
   font-weight: 300;
@@ -29,6 +31,25 @@
   text-decoration: none;
   color: black;
 }
+
+.nav-chapter-wrapper {
+  display: inline-block;
+
+  & .nav-chapter-name-wrapper {
+    display: inline-block;
+    transition: all 0.2s ease;
+  }
+}
+
+.nav-chapter-name-wrapper:hover {
+  -webkit-transform: skewX(-10deg);
+  -moz-transform: skewX(-10deg);
+  -o-transform: skewX(-10deg);
+  transform: skewX(-10deg);
+  transform-origin: bottom;
+}
+
+/*--- Side Links ---*/
 
 .side-link-wrapper {
   display: flex;
@@ -48,13 +69,25 @@
   transform: rotate(-90deg);
 }
 
-.left-link a,
-.right-link a {
+.left-link-inner-wrapper a,
+.right-link-inner-wrapper a {
   text-decoration: none;
   color: black;
   font-size: 1.7rem;
   font-weight: 300;
 }
+
+.left-link-inner-wrapper,
+.right-link-inner-wrapper {
+  padding: 0.6rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  &:hover {
+    transform: translateY(5px);
+  }
+}
+
+/* --- Background ---*/
 
 .bg-front-wrapper {
   margin-top: -200vh;
