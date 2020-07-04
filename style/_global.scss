@@ -1,4 +1,4 @@
-/* Global Settings */
+/*--- Global Settings ---*/
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +8,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  cursor: none;
 }
 
 body {
@@ -15,4 +16,118 @@ body {
   background: #fffef7;
   position: relative;
   overflow-x: hidden;
+}
+
+a,
+span {
+  cursor: none;
+}
+
+/*--- Cursor ---*/
+.cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  //transform-tra;
+}
+
+.cursor--small {
+  width: 12px;
+  height: 12px;
+  left: -2.5px;
+  top: -2.5px;
+  border-radius: 50%;
+
+  z-index: 11000;
+  background: #444444;
+}
+
+/*--- Magic Box ---*/
+span {
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+
+  &.magic-box {
+    display: inline-block;
+    transition: 0.3s;
+    transition-delay: 0s;
+  }
+
+  &.magic-box:hover {
+    color: #fff;
+    transition-delay: 0.11s;
+  }
+
+  &.magic-box::before {
+    content: " ";
+    position: absolute;
+    bottom: 5px;
+    left: -1px;
+    padding: -10px 2px;
+    width: calc(100% + 2px);
+    height: 1px;
+    transition: 0.4s;
+  }
+
+  &.magic-box:hover::before {
+    border-color: transparent;
+  }
+}
+
+// Outer span - magic fade
+.magic-fade::after {
+  z-index: 3;
+  animation: dot-fade 2s ease-in-out forwards 0.5s;
+}
+
+// Color - underline
+span {
+  &.color-1::before {
+    border-bottom: 2px solid #0c4842;
+  }
+  &.color-2::before {
+    border-bottom: 2px solid #32a5b7;
+  }
+  &.color-3::before {
+    border-bottom: 2px solid #a5dde3;
+  }
+  &.color-4::before {
+    border-bottom: 2px solid #66b9b5;
+  }
+}
+
+// Javascript Action
+.bgcolor::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(-38%, 50%);
+}
+
+.bgcolor-1::after {
+  content: url(../AnimationBackup/circleImg/PNG/color1.png);
+}
+
+.bgcolor-2::after {
+  content: url(../AnimationBackup/circleImg/PNG/color2.png);
+}
+
+.bgcolor-3::after {
+  content: url(../AnimationBackup/circleImg/PNG/color3.png);
+}
+
+.bgcolor-4::after {
+  content: url(../AnimationBackup/circleImg/PNG/color4.png);
+}
+
+// Animation
+@keyframes dot-fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
