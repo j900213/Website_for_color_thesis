@@ -199,7 +199,8 @@ body {
 
 /*--- Chapter on the Right handed side ---*/
 .chapter-1,
-.chapter-3 {
+.chapter-3,
+.chapter-5 {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
@@ -207,37 +208,44 @@ body {
 }
 
 .chapter-1 .refer-div .refer-right,
-.chapter-3 .refer-div .refer-right {
+.chapter-3 .refer-div .refer-right,
+.chapter-5 .refer-div .refer-right {
   padding-right: 3rem;
 }
 
 .chapter-1 .refer-div .refer-middle,
-.chapter-3 .refer-div .refer-middle {
+.chapter-3 .refer-div .refer-middle,
+.chapter-5 .refer-div .refer-middle {
   padding-right: 3rem;
 }
 
 .chapter-1 .refer-div .refer-left,
-.chapter-3 .refer-div .refer-left {
+.chapter-3 .refer-div .refer-left,
+.chapter-5 .refer-div .refer-left {
   padding-right: 3rem;
 }
 
 /*--- Chapter on the Left handed side ---*/
-.chapter-2 {
+.chapter-2,
+.chapter-4 {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
 
-.chapter-2 .refer-div .refer-right {
+.chapter-2 .refer-div .refer-right,
+.chapter-4 .refer-div .refer-right {
   padding-left: 3rem;
 }
 
-.chapter-2 .refer-div .refer-middle {
+.chapter-2 .refer-div .refer-middle,
+.chapter-4 .refer-div .refer-middle {
   padding-left: 3rem;
 }
 
-.chapter-2 .refer-div .refer-left {
+.chapter-2 .refer-div .refer-left,
+.chapter-4 .refer-div .refer-left {
   padding-left: 3rem;
 }
 
@@ -245,7 +253,7 @@ body {
 .bg-ch2-wrapper {
   position: absolute;
   right: -200rem;
-  top: -45%;
+  top: -100rem;
   -webkit-transform: scale(0.55);
           transform: scale(0.55);
   z-index: -10;
@@ -254,7 +262,7 @@ body {
 .bg-ch3-wrapper-1 {
   position: absolute;
   left: -280rem;
-  top: -80%;
+  top: -200rem;
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
   z-index: -10;
@@ -263,7 +271,52 @@ body {
 .bg-ch3-wrapper-2 {
   position: absolute;
   left: -260rem;
-  top: -20%;
+  top: -50rem;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  z-index: -10;
+}
+
+.bg-ch4-wrapper-1 {
+  position: absolute;
+  right: -275rem;
+  top: -170rem;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  z-index: -10;
+}
+
+.bg-ch4-wrapper-2 {
+  position: absolute;
+  right: -260rem;
+  top: 70rem;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  z-index: -10;
+}
+
+.bg-ch5-wrapper-1 {
+  position: absolute;
+  left: -250rem;
+  top: -195rem;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  z-index: -10;
+}
+
+.bg-ch5-wrapper-2 {
+  position: absolute;
+  left: -173rem;
+  top: -25rem;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  z-index: -10;
+}
+
+.bg-ch5-wrapper-3 {
+  position: absolute;
+  left: -195rem;
+  top: 250rem;
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
   z-index: -10;
@@ -280,6 +333,14 @@ body {
 
 .footer-green {
   color: #00e659;
+}
+
+.footer-blue {
+  color: #3c71ff;
+}
+
+.footer-purple {
+  color: #b7b6b6;
 }
 
 /*--- Reference ID Control ---*/
@@ -361,5 +422,165 @@ body {
 #no-16-refer {
   position: relative;
   top: 193rem;
+}
+
+#no-17-refer {
+  position: relative;
+  top: 47rem;
+}
+
+#no-18-refer {
+  position: relative;
+  top: 70rem;
+}
+
+#no-19-refer {
+  position: relative;
+  top: 87rem;
+}
+
+#no-20-refer {
+  position: relative;
+  top: 103rem;
+}
+
+#no-21-refer {
+  position: relative;
+  top: 140rem;
+}
+
+#no-22-refer {
+  position: relative;
+  top: 180rem;
+}
+
+#no-23-refer {
+  position: relative;
+  top: 182rem;
+}
+
+#no-24-refer {
+  position: relative;
+  top: 193rem;
+}
+
+#no-25-refer {
+  position: relative;
+  top: 190rem;
+}
+
+#no-26-refer {
+  position: relative;
+  top: 217rem;
+}
+
+#no-27-refer {
+  position: relative;
+  top: 220rem;
+}
+
+#no-28-refer {
+  position: relative;
+  top: 221rem;
+}
+
+#no-29-refer {
+  position: relative;
+  top: 219rem;
+}
+
+#no-30-refer {
+  position: relative;
+  top: 260rem;
+}
+
+#no-31-refer {
+  position: relative;
+  top: 275rem;
+}
+
+#no-31-refer {
+  position: relative;
+  top: 275rem;
+}
+
+#no-32-refer {
+  position: relative;
+  top: 10rem;
+}
+
+#no-33-refer {
+  position: relative;
+  top: 43rem;
+}
+
+#no-34-refer {
+  position: relative;
+  top: 108rem;
+}
+
+#no-35-refer {
+  position: relative;
+  top: 120rem;
+}
+
+#no-36-refer {
+  position: relative;
+  top: 123rem;
+}
+
+#no-37-refer {
+  position: relative;
+  top: 148rem;
+}
+
+#no-38-refer {
+  position: relative;
+  top: 193rem;
+}
+
+#no-39-refer {
+  position: relative;
+  top: 210rem;
+}
+
+#no-40-refer {
+  position: relative;
+  top: 248rem;
+}
+
+#no-41-refer {
+  position: relative;
+  top: 280rem;
+}
+
+#no-42-refer {
+  position: relative;
+  top: 297rem;
+}
+
+#no-43-refer {
+  position: relative;
+  top: 296rem;
+}
+
+#no-44-refer {
+  position: relative;
+  top: 330rem;
+}
+
+#no-45-refer {
+  position: relative;
+  top: 332rem;
+}
+
+#no-46-refer {
+  position: relative;
+  top: 383rem;
+}
+
+#no-47-refer {
+  position: relative;
+  top: 404rem;
 }
 /*# sourceMappingURL=style.css.map */
