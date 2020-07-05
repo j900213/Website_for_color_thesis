@@ -1,8 +1,8 @@
 .chapter-section {
   position: relative;
-  width: 85%;
+  width: 95%;
   margin: auto;
-  padding: 3rem 0vw 2rem 0vw;
+  padding: 1.5rem 0vw 8rem 0vw;
   border: solid rgba($color: #000000, $alpha: 0.3);
   border-width: 2px 0px 0px 0px;
   display: flex;
@@ -26,7 +26,7 @@
 
 .refer-content {
   font-size: 1.1rem;
-  line-height: 2rem;
+  line-height: 1.6rem;
 }
 
 .refer-footer-num {
@@ -37,8 +37,16 @@
   flex: 1 1 40rem;
   & .para-text {
     text-indent: 10rem;
-    margin: 1rem 0rem;
+    margin: 0rem 0rem;
   }
+
+  & .first-para {
+    text-indent: 0rem;
+  }
+}
+
+.quote-wrapper {
+  padding: 3rem 0rem;
 }
 
 .quote-text {
@@ -46,15 +54,12 @@
   padding: 0rem 10rem;
   font-size: 1.7rem;
   font-weight: 100;
-  line-height: 3.5rem;
-  margin: 2.4rem 0rem;
+  line-height: 2.7rem;
 }
 
 .quote-sign {
   font-style: italic;
   padding: 0rem 10rem;
-  margin-top: -3rem;
-  margin-bottom: 2.4rem;
   font-size: 1.7rem;
   font-weight: 100;
   line-height: 3.5rem;
@@ -63,6 +68,7 @@
 
 .ellipses {
   font-style: normal;
+  margin: 2.7rem 0rem;
 }
 
 #reference {
@@ -129,9 +135,9 @@
 
 .bg-ch2-wrapper {
   position: absolute;
-  right: -200rem;
-  top: -100rem;
-  transform: scale(0.55);
+  right: -190rem;
+  top: -110rem;
+  transform: scale(0.5);
   z-index: -10;
 }
 
@@ -185,8 +191,8 @@
 
 .bg-ch5-wrapper-3 {
   position: absolute;
-  left: -195rem;
-  top: 250rem;
+  left: -180rem;
+  bottom: -165rem;
   transform: scale(0.5);
   z-index: -10;
 }
@@ -248,47 +254,47 @@
 
 #no-2-refer {
   position: relative;
-  top: 32%;
+  top: 33.5%;
 }
 
 #no-3-refer {
   position: relative;
-  top: 38%;
+  top: 41%;
 }
 
 #no-4-refer {
   position: relative;
-  top: 78%;
+  top: 79%;
 }
 
 #no-5-refer {
   position: relative;
-  top: 80%;
+  top: 81%;
 }
 
 #no-6-refer {
   position: relative;
-  top: 10%;
+  top: 11.5%;
 }
 
 #no-7-refer {
   position: relative;
-  top: 23%;
+  top: 26%;
 }
 
 #no-8-refer {
   position: relative;
-  top: 56%;
+  top: 57.5%;
 }
 
 #no-9-refer {
   position: relative;
-  top: 53%;
+  top: 53.5%;
 }
 
 #no-10-refer {
   position: relative;
-  top: 65%;
+  top: 65.5%;
 }
 
 #no-11-refer {
@@ -298,7 +304,7 @@
 
 #no-12-refer {
   position: relative;
-  top: 7%;
+  top: 6%;
 }
 
 #no-13-refer {
@@ -313,7 +319,7 @@
 
 #no-15-refer {
   position: relative;
-  top: 33%;
+  top: 35%;
 }
 
 #no-16-refer {
@@ -328,17 +334,17 @@
 
 #no-18-refer {
   position: relative;
-  top: 22%;
+  top: 20%;
 }
 
 #no-19-refer {
   position: relative;
-  top: 27%;
+  top: 26.5%;
 }
 
 #no-20-refer {
   position: relative;
-  top: 32%;
+  top: 33%;
 }
 
 #no-21-refer {
@@ -348,22 +354,22 @@
 
 #no-22-refer {
   position: relative;
-  top: 56%;
+  top: 58%;
 }
 
 #no-23-refer {
   position: relative;
-  top: 56.5%;
+  top: 59%;
 }
 
 #no-24-refer {
   position: relative;
-  top: 59%;
+  top: 60.5%;
 }
 
 #no-25-refer {
   position: relative;
-  top: 59%;
+  top: 60.5%;
 }
 
 #no-26-refer {
@@ -373,12 +379,12 @@
 
 #no-27-refer {
   position: relative;
-  top: 68.5%;
+  top: 69.5%;
 }
 
 #no-28-refer {
   position: relative;
-  top: 69%;
+  top: 70.5%;
 }
 
 #no-29-refer {
@@ -388,42 +394,42 @@
 
 #no-30-refer {
   position: relative;
-  top: 81%;
+  top: 80.5%;
 }
 
 #no-31-refer {
   position: relative;
-  top: 86%;
+  top: 84.5%;
 }
 
 #no-32-refer {
   position: relative;
-  top: 2.5%;
+  top: 4%;
 }
 
 #no-33-refer {
   position: relative;
-  top: 10%;
+  top: 12.5%;
 }
 
 #no-34-refer {
   position: relative;
-  top: 25%;
+  top: 27%;
 }
 
 #no-35-refer {
   position: relative;
-  top: 27.5%;
+  top: 29.5%;
 }
 
 #no-36-refer {
   position: relative;
-  top: 28%;
+  top: 31%;
 }
 
 #no-37-refer {
   position: relative;
-  top: 34%;
+  top: 35.5%;
 }
 
 #no-38-refer {
@@ -438,7 +444,7 @@
 
 #no-40-refer {
   position: relative;
-  top: 57%;
+  top: 58%;
 }
 
 #no-41-refer {
@@ -458,17 +464,17 @@
 
 #no-44-refer {
   position: relative;
-  top: 76%;
+  top: 75.5%;
 }
 
 #no-45-refer {
   position: relative;
-  top: 76%;
+  top: 75.5%;
 }
 
 #no-46-refer {
   position: relative;
-  top: 88%;
+  top: 86.5%;
 }
 
 #no-47-refer {
@@ -498,17 +504,17 @@
 
 #no-52-refer {
   position: relative;
-  top: 33%;
+  top: 32%;
 }
 
 #no-53-refer {
   position: relative;
-  top: 33.5%;
+  top: 32.5%;
 }
 
 #no-54-refer {
   position: relative;
-  top: 54%;
+  top: 52.5%;
 }
 
 #no-55-refer {
@@ -518,66 +524,25 @@
 
 #no-56-refer {
   position: relative;
-  top: 62%;
+  top: 60%;
 }
 
 #no-57-refer {
   position: relative;
-  top: 75%;
+  top: 74%;
 }
 
 #no-60-refer {
   position: relative;
-  top: 79.5%;
+  top: 79%;
 }
 
 #no-61-refer {
   position: relative;
-  top: 80%;
+  top: 79.5%;
 }
 
 #no-62-refer {
   position: relative;
-  top: 80.5%;
-}
-
-/*-------------------*/
-/*--- Responsive ----*/
-/*-------------------*/
-
-@media screen and (max-width: 1024px) {
-  .chapter-section {
-    width: 80%;
-  }
-
-  .refer-div {
-    display: none;
-  }
-
-  .bg-tablet {
-    display: block;
-  }
-
-  /*--- Reference ----*/
-
-  #reference {
-    display: block;
-  }
-
-  .reference-grid-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2rem;
-  }
-
-  .refer-title {
-    font-size: 1.3rem;
-    font-weight: 100;
-  }
-
-  .refer-tablet div {
-    position: !important;
-    top: 0 !important;
-    margin-top: 1rem;
-  }
+  top: 80%;
 }
