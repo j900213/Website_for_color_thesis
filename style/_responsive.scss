@@ -1,0 +1,120 @@
+@media screen and (max-width: 1024px) {
+  /*--- Header ---*/
+  .main-section {
+    margin: 0rem 2.5rem;
+  }
+
+  .nav-wrapper {
+    padding-top: 4%;
+    align-self: flex-start;
+  }
+  .nav-chapter-wrapper {
+    display: block;
+  }
+  .bg-front-wrapper {
+    margin-top: -205rem;
+  }
+
+  /*--- Abstract ---*/
+  .abstract-section {
+    width: 90%;
+    padding: 1.5rem 0vw 8rem 0vw;
+  }
+
+  /*--- Chapter ---*/
+  .chapter-section {
+    width: 90%;
+  }
+
+  .refer-div {
+    display: none;
+  }
+
+  .bg-tablet {
+    display: block;
+  }
+
+  /*--- Reference ----*/
+
+  #reference {
+    display: block;
+  }
+
+  .reference-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 23rem);
+    justify-content: center;
+    grid-gap: 3rem;
+  }
+
+  .refer-title {
+    font-size: 1.3rem;
+    font-weight: 100;
+  }
+
+  .refer-tablet div {
+    top: 0 !important;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .cursor {
+    display: none;
+  }
+
+  /*--- Header ---*/
+  .main-header {
+    width: 100%;
+  }
+
+  .main-title {
+    font-size: 2rem;
+    align-self: flex-start;
+  }
+
+  .nav-chapter-no {
+    font-size: 2rem;
+  }
+
+  .nav-chapter-name {
+    font-size: 3.2rem;
+  }
+
+  .side-link-wrapper {
+    display: none;
+  }
+
+  /*--- Abstract ---*/
+  .abstract-section {
+    width: 88%;
+  }
+
+  /*--- Chapter ---*/
+  .chapter-section {
+    width: 88%;
+  }
+
+  .para-div {
+    & .para-text {
+      text-indent: 6rem;
+    }
+  }
+
+  .quote-text {
+    padding: 0rem 3rem;
+  }
+
+  .quote-sign {
+    padding: 0rem 3rem;
+  }
+
+  .ellipses {
+    padding: 0rem 6rem;
+  }
+
+  .reference-grid-wrapper {
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+  }
+}

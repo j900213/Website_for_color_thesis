@@ -6,9 +6,14 @@
     <meta name="description" content="Yuan Xiao's Essay" />
     <meta name="robots" content="index, follow" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Arvo&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="./style/style.css" />
     <title>Sora - A Colour of Sky Blue and Void</title>
   </head>
@@ -20,24 +25,28 @@
         <h1 class="main-title">
           Sora - A Colour of Sky Blue and Void
         </h1>
+        <div class="burger">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+        </div>
         <nav class="nav-wrapper">
           <div class="nav-chapter-wrapper">
             <span class="nav-chapter-no">CH0</span>
-            <div class="nav-chapter-name-wrapper">
+            <div class="nav-chapter-name-wrapper links-wrapper">
               <a href="#abstract" class="nav-chapter-name">Abstract </a>
             </div>
           </div>
 
           <div class="nav-chapter-wrapper">
             <span class="nav-chapter-no">CH1</span>
-            <div class="nav-chapter-name-wrapper">
+            <div class="nav-chapter-name-wrapper links-wrapper">
               <a href="#chapter-1" class="nav-chapter-name">The Red Earth </a>
             </div>
           </div>
 
           <div class="nav-chapter-wrapper">
             <span class="nav-chapter-no">CH2</span>
-            <div class="nav-chapter-name-wrapper">
+            <div class="nav-chapter-name-wrapper links-wrapper">
               <a href="#chapter-2" class="nav-chapter-name"
                 >The Memory of 菜の花 (nanohana)</a
               >
@@ -46,14 +55,14 @@
 
           <div class="nav-chapter-wrapper">
             <span class="nav-chapter-no">CH3</span>
-            <div class="nav-chapter-name-wrapper">
+            <div class="nav-chapter-name-wrapper links-wrapper">
               <a href="#chapter-3" class="nav-chapter-name">Green In Nature</a>
             </div>
           </div>
 
           <div class="nav-chapter-wrapper">
             <span class="nav-chapter-no">CH4</span>
-            <div class="nav-chapter-name-wrapper">
+            <div class="nav-chapter-name-wrapper links-wrapper">
               <a href="#chapter-4" class="nav-chapter-name"
                 >Deep into the Dying World</a
               >
@@ -62,14 +71,14 @@
 
           <div class="nav-chapter-wrapper">
             <span class="nav-chapter-no">CH5</span>
-            <div class="nav-chapter-name-wrapper">
+            <div class="nav-chapter-name-wrapper links-wrapper">
               <a href="#chapter-5" class="nav-chapter-name">The Luminosity</a>
             </div>
           </div>
 
           <div class="nav-chapter-wrapper">
             <span class="nav-chapter-no">CH6</span>
-            <div class="nav-chapter-name-wrapper">
+            <div class="nav-chapter-name-wrapper links-wrapper">
               <a href="#conclusion" class="nav-chapter-name">Conclusion</a>
             </div>
           </div>
@@ -80,12 +89,12 @@
       </header>
       <div class="side-link-wrapper">
         <div class="left-link">
-          <div class="left-link-inner-wrapper">
+          <div class="left-link-inner-wrapper links-wrapper">
             <a href="">Colour</a>
           </div>
         </div>
         <div class="right-link">
-          <div class="right-link-inner-wrapper">
+          <div class="right-link-inner-wrapper links-wrapper">
             <a href="">Yuan Xiao</a>
           </div>
         </div>
@@ -124,7 +133,7 @@
     <section class="chapter-section" id="chapter-1">
       <div class="para-div">
         <h2 class="chapter-title">Chapter 1 —The Red Earth</h2>
-        <p class="para-text">
+        <p class="para-text first-para">
           There is a hidden palette of reds in nature: clay, plants, berries,
           bark, flowers, and minerals
           <span class="refer-footer-num footer-red">1</span>, and the
@@ -148,12 +157,15 @@
           the author’s melancholic feelings when he was saying goodbye to his
           friend:
         </p>
-        <p class="quote-text">
-          Red beans grow in southern land, <br />
-          How many loads in spring the trees. <br />
-          Gather them till full in your hand, <br />
-          They would revive fond memories.
-        </p>
+        <div class="quote-wrapper">
+          <p class="quote-text">
+            Red beans grow in southern land, <br />
+            How many loads in spring the trees. <br />
+            Gather them till full in your hand, <br />
+            They would revive fond memories.
+          </p>
+        </div>
+
         <p class="para-text">
           Some red names were from bird and animal, like toki (鴇), benitobi
           (紅鳶) and kurotobi (黒鳶). The toki is crested ibis in Japanese, and
@@ -292,18 +304,21 @@
     <section class="chapter-section" id="chapter-2">
       <div class="para-div">
         <h2 class="chapter-title">Chapter 2—The Memory of 菜の花 (nanohana)</h2>
-        <p class="quote-text">
-          Before going to sleep in the morning, he would gaze, with his head on
-          the pillow, at his EI Greco whose barbaric colour rebuked the smiling,
-          yellow material and recalled it to a more serious tone. Then he could
-          easily imagine himself living a hundred leagues removed from Paris,
-          far from society, in cloistral security.
-          <span class="refer-footer-num footer-orange">6</span>
-        </p>
-        <p class="quote-sign">
-          ——J. K. Huysman
-        </p>
-        <p class="para-text">
+        <div class="quote-wrapper">
+          <p class="quote-text">
+            Before going to sleep in the morning, he would gaze, with his head
+            on the pillow, at his EI Greco whose barbaric colour rebuked the
+            smiling, yellow material and recalled it to a more serious tone.
+            Then he could easily imagine himself living a hundred leagues
+            removed from Paris, far from society, in cloistral security.
+            <span class="refer-footer-num footer-orange">6</span>
+          </p>
+          <p class="quote-sign">
+            ——J. K. Huysman
+          </p>
+        </div>
+
+        <p class="para-text first-para">
           There was a small field full of rapeseed flowers near my childhood
           house in the countryside. In springtime, I would go to the field with
           friends and play in there. If the weather was sunny enough, I would
@@ -469,7 +484,7 @@
     <section class="chapter-section" id="chapter-3">
       <div class="para-div">
         <h2 class="chapter-title">Chapter 3—Green In Nature</h2>
-        <p class="para-text">
+        <p class="para-text first-para">
           The nomenclature of green colours mostly was named from natures
           because Japanese have had centuries of contact with trees and plants,
           through gardening and the art of floral arrangement.
@@ -483,16 +498,19 @@
           flowers and green willow’ (花红柳绿), depicts a spring scene. It can
           also be used to refer to the colourful world. As Foucault put:
         </p>
-        <p class="quote-text">
-          the art of language was a way of “making sign” – of simultaneously
-          signifying something and arranging signs around those things; an art
-          of naming, therefore, and then, by means of a reduplication both
-          demonstrative and decorative, or capturing the name, of enclosing and
-          concealing it, of designating it in turn by other names that were the
-          deferred presence of the first name, its secondary sign, its
-          figuration, its rhetorical panoply.
-          <span class="refer-footer-num footer-green">13</span>
-        </p>
+        <div class="quote-wrapper">
+          <p class="quote-text">
+            the art of language was a way of “making sign” – of simultaneously
+            signifying something and arranging signs around those things; an art
+            of naming, therefore, and then, by means of a reduplication both
+            demonstrative and decorative, or capturing the name, of enclosing
+            and concealing it, of designating it in turn by other names that
+            were the deferred presence of the first name, its secondary sign,
+            its figuration, its rhetorical panoply.
+            <span class="refer-footer-num footer-green">13</span>
+          </p>
+        </div>
+
         <p class="para-text">
           Last time when I was in the Nara area with a group of friends, we were
           there to attended the Gozan no Okuribi (五山送り火in Japanese)
@@ -647,7 +665,7 @@
     <section class="chapter-section" id="chapter-4">
       <div class="para-div">
         <h2 class="chapter-title">Chapter 4—Deep into the Dying World</h2>
-        <p class="para-text">
+        <p class="para-text first-para">
           I once participated in a dyeing workshop when I was fourteen or
           fifteen. We were asked to dye a small piece of white fabric into a
           light blue colour fabric. The workshop was intended to teach very
@@ -683,14 +701,20 @@
           >
           Pastoureau studied Goethe’s view on colours, and he wrote:
         </p>
-        <p class="quote-text">
-          The literature of the Englightment and later of the early Romantic
-          period echoed the new fashion for blue tones. The most notable example
-          of this is Werther’s famous blue-and-yellow outfit […] Blue along with
-          yellow is one of the poles of Goethe’s color system. He saw in the
-          juxtaposition (or the fusion) of these two colors the absolute form of
-          chromatic harmony.<span class="refer-footer-num footer-blue">19</span>
-        </p>
+        <div class="quote-wrapper">
+          <p class="quote-text">
+            The literature of the Englightment and later of the early Romantic
+            period echoed the new fashion for blue tones. The most notable
+            example of this is Werther’s famous blue-and-yellow outfit […] Blue
+            along with yellow is one of the poles of Goethe’s color system. He
+            saw in the juxtaposition (or the fusion) of these two colors the
+            absolute form of chromatic harmony.<span
+              class="refer-footer-num footer-blue"
+              >19</span
+            >
+          </p>
+        </div>
+
         <p class="para-text">
           From a linguistic point of view, ‘Yellow, constituted the negative
           pole, because it is a passive, weak and cold color, while blue was
@@ -716,13 +740,16 @@
           colour.<span class="refer-footer-num footer-blue">21</span> Mr. Jiang
           explained to me that:
         </p>
-        <p class="quote-text">
-          The word ‘lean (靠)’ might mean ‘inside of the jar’ (in the book). And
-          the dyed pale blue colour might be from the colour that was left over
-          inside a jar, and because the soaking time for fabrics is very short,
-          this dyed blue colour can be as lightest as possible. This colour is
-          nearly like white colour.
-        </p>
+        <div class="quote-wrapper">
+          <p class="quote-text">
+            The word ‘lean (靠)’ might mean ‘inside of the jar’ (in the book).
+            And the dyed pale blue colour might be from the colour that was left
+            over inside a jar, and because the soaking time for fabrics is very
+            short, this dyed blue colour can be as lightest as possible. This
+            colour is nearly like white colour.
+          </p>
+        </div>
+
         <p class="para-text">
           But then he added, ‘it’s just a possibility’. After hearing Mr.
           Jiang’s viewpoint on the colour of ‘lean in’, I found there is a
@@ -811,14 +838,17 @@
           in Japanese. Hiroshi Sugimoto describes the sky he saw every morning
           in Tokyo from his studio:
         </p>
-        <p class="quote-text">
-          seeing the darkness tint ultramarine each dawn as I sighted the
-          morning star, I really got a sense of what Goethe wrote in his
-          preface: ‘Die Farben sind Taten des Lichts, Taten und Leiden (Colours
-          are acts of light, acts and sufferings)’. I interpret this to mean
-          colour occurs when light strikes some obstruction, suffering the
-          impact.<span class="refer-footer-num footer-blue">31</span>
-        </p>
+        <div class="quote-wrapper">
+          <p class="quote-text">
+            seeing the darkness tint ultramarine each dawn as I sighted the
+            morning star, I really got a sense of what Goethe wrote in his
+            preface: ‘Die Farben sind Taten des Lichts, Taten und Leiden
+            (Colours are acts of light, acts and sufferings)’. I interpret this
+            to mean colour occurs when light strikes some obstruction, suffering
+            the impact.<span class="refer-footer-num footer-blue">31</span>
+          </p>
+        </div>
+
         <div class="bg-tablet bg-ch4-wrapper-1">
           <img src="./image/bg/color-ch4-1.png" alt="" />
         </div>
@@ -979,30 +1009,34 @@
     <section class="chapter-section" id="chapter-5">
       <div class="para-div">
         <h2 class="chapter-title">Chapter 5—The Luminosity</h2>
-
-        <p class="quote-text">
-          The explanation for the fact that mixing coloured light makes white,
-          while mixing coloured paint makes black, lies in the science of
-          optics.<span class="refer-footer-num footer-grey">32</span>
-        </p>
-        <p class="quote-sign">
-          ——Kassia St. Clair
-        </p>
-        <p class="para-text">
+        <div class="quote-wrapper">
+          <p class="quote-text">
+            The explanation for the fact that mixing coloured light makes white,
+            while mixing coloured paint makes black, lies in the science of
+            optics.<span class="refer-footer-num footer-grey">32</span>
+          </p>
+          <p class="quote-sign">
+            ——Kassia St. Clair
+          </p>
+        </div>
+        <p class="para-text first-para">
           In Derek Jarman’s book Chroma, he quoted what Aristotle wrote about
           white:
         </p>
-        <p class="quote-text">
-          Those colours are simple which belong to the elements, fire, air,
-          water and earth. For air and water are naturally white in themselves,
-          while fire and the sun are golden. The earth is also naturally white,
-          but seems coloured because it is dyed. This becomes clear when we
-          consider ashes, for they become white when the moisture which caused
-          their dyeing is burnt out of them.<span
-            class="refer-footer-num footer-grey"
-            >33</span
-          >
-        </p>
+        <div class="quote-wrapper">
+          <p class="quote-text">
+            Those colours are simple which belong to the elements, fire, air,
+            water and earth. For air and water are naturally white in
+            themselves, while fire and the sun are golden. The earth is also
+            naturally white, but seems coloured because it is dyed. This becomes
+            clear when we consider ashes, for they become white when the
+            moisture which caused their dyeing is burnt out of them.<span
+              class="refer-footer-num footer-grey"
+              >33</span
+            >
+          </p>
+        </div>
+
         <p class="para-text">
           I have heard something similar too, maybe once or twice from my
           grandmother. I asked her if the earth is always yellow, she told me,
@@ -1094,10 +1128,13 @@
           says: ‘It gets luminous when it is too black while brightness results
           in being too white.’
         </p>
-        <p class="quote-text">
-          But for their voices the white herons would be lost in the morning
-          snow.<span class="refer-footer-num footer-grey">39</span>
-        </p>
+        <div class="quote-wrapper">
+          <p class="quote-text">
+            But for their voices the white herons would be lost in the morning
+            snow.<span class="refer-footer-num footer-grey">39</span>
+          </p>
+        </div>
+
         <p class="para-text">
           Shiro(白) means white in Japanese, a colour for funeral, a colour
           associates with purity and spirituality. In Buddhist culture, white
@@ -1149,18 +1186,21 @@
           there is a passage later in the book, where he describes the
           relationship of food and shadows:
         </p>
-        <p class="quote-text">
-          Above all there is rice. A glistening black lacquer rice cask set off
-          in a dark corner is both beautiful to behold and a powerful stimulus
-          to the appetite. Then, the lid is briskly lifted, and this pure white
-          freshly boiled food, heaped in its black container, each and every
-          grain gleaming like a pearl, sends forth billows of warm steam – here
-          is a sight no Japanese can fail to be moved by. Our cooking depends
-          upon shadows and is inseparable from darkness.<span
-            class="refer-footer-num footer-grey"
-            >44</span
-          >
-        </p>
+        <div class="quote-wrapper">
+          <p class="quote-text">
+            Above all there is rice. A glistening black lacquer rice cask set
+            off in a dark corner is both beautiful to behold and a powerful
+            stimulus to the appetite. Then, the lid is briskly lifted, and this
+            pure white freshly boiled food, heaped in its black container, each
+            and every grain gleaming like a pearl, sends forth billows of warm
+            steam – here is a sight no Japanese can fail to be moved by. Our
+            cooking depends upon shadows and is inseparable from darkness.<span
+              class="refer-footer-num footer-grey"
+              >44</span
+            >
+          </p>
+        </div>
+
         <p class="para-text">
           A Buddhist idiom says: ‘Food, Colour, Human Nature’(食色性也).<span
             class="refer-footer-num footer-grey"
@@ -1380,7 +1420,7 @@
     <section class="chapter-section" id="conclusion">
       <div class="para-div">
         <h2 class="chapter-title">Conclusion</h2>
-        <p class="para-text">
+        <p class="para-text first-para">
           At the painting class back in primary school, the first few lessons I
           learnt were colours. One of the lessons we did was study on colours
           through different names. A small box that contained twentyish paints
@@ -1554,11 +1594,13 @@
             >61</span
           >
         </p>
-        <p class="quote-text">
+
+        <p class="para-text">
           Sugimoto said: ‘I have no willing to be a human again, if there is an
           afterlife, I’d wish to be a flower, a blooming flower that cannot be
           named.’<span class="refer-footer-num footer-purple">62</span>
         </p>
+
         <p class="para-text">
           But I have my own wish, I wish colours travel, from past to present
           day, from one corner of the world to another side of the world,

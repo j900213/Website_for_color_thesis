@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   min-height: 20vh;
-  width: 90%;
+  width: 95%;
   margin: auto;
   z-index: 10;
 }
@@ -19,7 +19,7 @@
 .main-title {
   font-size: 2.4rem;
   font-weight: 300;
-  margin: 3rem 0rem 2rem 0rem;
+  margin: 1.5rem 0rem 2rem 0rem;
 }
 
 .nav-chapter-no {
@@ -27,7 +27,7 @@
 }
 
 .nav-chapter-name {
-  font-size: 4.2rem;
+  font-size: 4.3rem;
   text-decoration: none;
   color: black;
 }
@@ -57,20 +57,23 @@
 
 .left-link {
   position: fixed;
-  left: 0%;
+  left: -2rem;
   top: 50%;
   transform: rotate(90deg);
+  transform-origin: center;
 }
 
 .right-link {
   position: fixed;
-  right: 0%;
+  right: -3rem;
   top: 50%;
   transform: rotate(-90deg);
+  transform-origin: center;
 }
 
 .left-link-inner-wrapper a,
 .right-link-inner-wrapper a {
+  padding: 1.5rem 1rem;
   text-decoration: none;
   color: black;
   font-size: 1.7rem;
@@ -79,7 +82,7 @@
 
 .left-link-inner-wrapper,
 .right-link-inner-wrapper {
-  padding: 0.6rem;
+  //padding: 1.5rem 1rem;
   transition: all 0.2s ease;
   cursor: none;
   &:hover {
@@ -94,20 +97,4 @@
   margin-bottom: -200vh;
   transform: scale(0.55);
   z-index: -1;
-}
-
-/*--- Responsive ---*/
-@media screen and (max-width: 1024px) {
-  .main-section {
-    padding: 0rem 5rem;
-  }
-  .nav-wrapper {
-    padding-top: 8%;
-  }
-  .nav-chapter-wrapper {
-    display: block;
-  }
-  .bg-front-wrapper {
-    margin-top: -205rem;
-  }
 }
