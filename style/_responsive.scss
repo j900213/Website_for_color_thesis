@@ -87,30 +87,30 @@
 
   /*--- Abstract ---*/
   .abstract-section {
-    width: 88%;
+    width: 90%;
   }
 
   /*--- Chapter ---*/
   .chapter-section {
-    width: 88%;
+    width: 90%;
   }
 
   .para-div {
     & .para-text {
-      text-indent: 6rem;
+      text-indent: 5rem;
     }
   }
 
   .quote-text {
-    padding: 0rem 3rem;
+    padding: 0rem 0rem 0rem 5rem;
   }
 
   .quote-sign {
-    padding: 0rem 3rem;
+    padding: 0rem 0rem 0rem 5rem;
   }
 
   .ellipses {
-    padding: 0rem 6rem;
+    padding: 0rem 5rem;
   }
 
   .reference-grid-wrapper {
