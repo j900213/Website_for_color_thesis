@@ -133,6 +133,14 @@
   display: none;
 }
 
+.bg-ch1-wrapper {
+  position: absolute;
+  left: -90rem;
+  top: 10rem;
+  transform: scale(1);
+  z-index: -10;
+}
+
 .bg-ch2-wrapper {
   position: absolute;
   right: -190rem;

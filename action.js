@@ -1,10 +1,14 @@
 const innerCursor = document.querySelector(".cursor--small");
 const target = document.querySelectorAll(".magic-box");
 const links = document.querySelectorAll("a");
+const abstractSec = document.querySelector(".abstract-section");
+const titleWrapper = document.querySelector(".main-title-wrapper");
 let clientX = -100;
 let clientY = -100;
 let colorSaved;
 let borderSaved;
+
+console.log(abstractSec);
 
 /*--- Cursor Initilazation ---*/
 const initCursor = () => {
@@ -48,6 +52,19 @@ links.forEach((link) => {
     innerCursor.style.background = `${colorSaved}`;
   });
 });
+
+/*--- Navigation Background ---*/
+window.addEventListener("scroll", navBgChange);
+
+function navBgChange() {
+  const abstractPos = abstractSec.getBoundingClientRect().top;
+  console.log(abstractPos);
+  if (abstractPos > 0) {
+    titleWrapper.style.background = `transparent`;
+  } else {
+    titleWrapper.style.background = `white`;
+  }
+}
 
 /*--- Magic Fireworks ---*/
 for (let i = 0; i < target.length; i++) {

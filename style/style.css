@@ -164,8 +164,11 @@ span.color-4::before {
 }
 
 .main-section {
-  height: 100vh;
+  height: 105vh;
   position: relative;
+  background-image: url(../image/bg/colorhero.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .main-header {
@@ -189,10 +192,35 @@ span.color-4::before {
 }
 
 /*--- Navigation Head ---*/
+.main-title-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0rem;
+  z-index: 100;
+}
+
+.main-title-link-wrapper {
+  text-decoration: none;
+  color: black;
+}
+
 .main-title {
   font-size: 2.4rem;
   font-weight: 300;
   margin: 1.5rem 0rem 2rem 0rem;
+}
+
+.nav-wrapper {
+  margin-top: 5rem;
 }
 
 .nav-chapter-no {
@@ -273,6 +301,7 @@ span.color-4::before {
 
 /* --- Background ---*/
 .bg-front-wrapper {
+  display: none;
   margin-top: -185rem;
   margin-bottom: -200vh;
   -webkit-transform: scale(0.55);
@@ -286,11 +315,9 @@ span.color-4::before {
 }
 
 .abstract-section {
-  min-height: 85vh;
+  min-height: 80vh;
   width: 95%;
   margin: auto;
-  border: solid rgba(0, 0, 0, 0.3);
-  border-width: 2px 0px 0px 0px;
   padding: 1.5rem 25% 8rem 0vw;
 }
 
@@ -468,6 +495,15 @@ span.color-4::before {
 /*--- Background IMG---*/
 .bg-tablet {
   display: none;
+}
+
+.bg-ch1-wrapper {
+  position: absolute;
+  left: -90rem;
+  top: 10rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  z-index: -10;
 }
 
 .bg-ch2-wrapper {
@@ -959,6 +995,9 @@ span.color-4::before {
     overflow-x: hidden;
   }
   /*--- Header ---*/
+  .main-section {
+    height: 100vh;
+  }
   .main-header {
     width: 90%;
   }
