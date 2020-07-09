@@ -952,20 +952,23 @@ span.color-4::before {
 }
 
 @media screen and (max-width: 548px) {
+  .cursor {
+    display: none;
+  }
   /*--- Header ---*/
   .main-header {
     width: 100%;
   }
   .main-title {
-    font-size: 2rem;
+    font-size: 1.9rem;
     -ms-flex-item-align: start;
         align-self: flex-start;
   }
   .nav-chapter-no {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
   .nav-chapter-name {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
   }
   .side-link-wrapper {
     display: none;
@@ -984,7 +987,7 @@ span.color-4::before {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .mobile-left {
     -webkit-box-flex: 1;
