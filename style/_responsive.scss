@@ -1,7 +1,11 @@
 @media screen and (max-width: 1024px) {
   /*--- Header ---*/
   .main-section {
-    margin: 0rem 2.5rem;
+    //margin: 0rem 2.5rem;
+  }
+
+  .main-header {
+    width: 90%;
   }
 
   .nav-wrapper {
@@ -65,7 +69,7 @@
 
   /*--- Header ---*/
   .main-header {
-    width: 100%;
+    width: 90%;
     //position: relative;
   }
 
@@ -88,9 +92,9 @@
 
   .mobile-nav-wrapper {
     display: flex;
-    width: 95%;
+    width: 90%;
     position: absolute;
-    bottom: 10vh;
+    bottom: 5rem;
     align-items: center;
     justify-content: center;
     font-size: 1.8rem;
