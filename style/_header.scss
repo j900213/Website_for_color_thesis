@@ -24,9 +24,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
+  position: relative;
   top: 0rem;
   z-index: 100;
+}
+
+.main-static {
+  display: flex;
+}
+
+.main-sticky {
+  display: none;
+  background: white;
+  position: fixed;
 }
 
 .main-title-link-wrapper {
@@ -38,10 +48,6 @@
   font-size: 2.4rem;
   font-weight: 300;
   margin: 1.5rem 0rem 2rem 0rem;
-}
-
-.nav-wrapper {
-  margin-top: 5rem;
 }
 
 .nav-chapter-no {

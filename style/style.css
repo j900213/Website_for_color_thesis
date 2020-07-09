@@ -203,9 +203,21 @@ span.color-4::before {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: fixed;
+  position: relative;
   top: 0rem;
   z-index: 100;
+}
+
+.main-static {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-sticky {
+  display: none;
+  background: white;
+  position: fixed;
 }
 
 .main-title-link-wrapper {
@@ -217,10 +229,6 @@ span.color-4::before {
   font-size: 2.4rem;
   font-weight: 300;
   margin: 1.5rem 0rem 2rem 0rem;
-}
-
-.nav-wrapper {
-  margin-top: 5rem;
 }
 
 .nav-chapter-no {

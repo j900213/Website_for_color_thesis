@@ -2,7 +2,9 @@ const innerCursor = document.querySelector(".cursor--small");
 const target = document.querySelectorAll(".magic-box");
 const links = document.querySelectorAll("a");
 const abstractSec = document.querySelector(".abstract-section");
-const titleWrapper = document.querySelector(".main-title-wrapper");
+const titleStatic = document.querySelector(".main-static");
+const titleSticky = document.querySelector(".main-sticky");
+
 let clientX = -100;
 let clientY = -100;
 let colorSaved;
@@ -60,9 +62,11 @@ function navBgChange() {
   const abstractPos = abstractSec.getBoundingClientRect().top;
   console.log(abstractPos);
   if (abstractPos > 0) {
-    titleWrapper.style.background = `transparent`;
+    titleStatic.style.display = `flex`;
+    titleSticky.style.display = `none`;
   } else {
-    titleWrapper.style.background = `white`;
+    titleStatic.style.display = `none`;
+    titleSticky.style.display = `flex`;
   }
 }
 
