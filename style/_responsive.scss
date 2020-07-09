@@ -67,6 +67,11 @@
     display: none;
   }
 
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   /*--- Header ---*/
   .main-header {
     width: 90%;
@@ -94,7 +99,7 @@
     display: flex;
     width: 90%;
     position: absolute;
-    bottom: 5rem;
+    bottom: 3rem;
     align-items: center;
     justify-content: center;
     font-size: 1.8rem;

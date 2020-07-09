@@ -954,6 +954,10 @@ span.color-4::before {
   .cursor {
     display: none;
   }
+  html,
+  body {
+    overflow-x: hidden;
+  }
   /*--- Header ---*/
   .main-header {
     width: 90%;
@@ -978,7 +982,7 @@ span.color-4::before {
     display: flex;
     width: 90%;
     position: absolute;
-    bottom: 5rem;
+    bottom: 3rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
