@@ -60,7 +60,7 @@
 
 @media screen and (max-width: 548px) {
   .cursor {
-    //display: none;
+    display: none;
   }
 
   /*--- Header ---*/
@@ -70,16 +70,16 @@
   }
 
   .main-title {
-    font-size: 2rem;
+    font-size: 1.9rem;
     align-self: flex-start;
   }
 
   .nav-chapter-no {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 
   .nav-chapter-name {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
   }
 
   .side-link-wrapper {
@@ -94,7 +94,7 @@
     bottom: 5%;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .mobile-left {
