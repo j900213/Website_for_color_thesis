@@ -61,6 +61,7 @@ img {
 /*--- Magic Box ---*/
 span {
   text-decoration: none;
+  text-indent: 0rem;
   position: relative;
   z-index: 2;
 
@@ -80,61 +81,291 @@ span {
     position: absolute;
     bottom: 1px;
     left: -1px;
-    padding: -10px 2px;
+    padding: 10px 2px;
     width: calc(100% + 2px);
     height: 1px;
     transition: 0.4s;
   }
 
   &.magic-box:hover::before {
-    border-color: transparent;
+    //border-color: transparent;
   }
 }
 
 // Outer span - magic fade
 .magic-fade::after {
+  position: relative;
   z-index: 3;
   animation: dot-fade 2s ease-in-out forwards 0.5s;
 }
 
 // Color - underline
 span {
+  // mizu
   &.color-1::before {
-    border-bottom: 2px solid #0c4842;
+    border-bottom: 2px solid #81c7d4;
   }
+  // sakura
   &.color-2::before {
-    border-bottom: 2px solid #32a5b7;
+    border-bottom: 2px solid #fedfe1;
   }
+  // ichigo
   &.color-3::before {
-    border-bottom: 2px solid #a5dde3;
+    border-bottom: 2px solid #b5495b;
   }
+  // azuki
   &.color-4::before {
-    border-bottom: 2px solid #66b9b5;
+    border-bottom: 2px solid #954a45;
+  }
+  // syojyohi
+  &.color-5::before {
+    border-bottom: 2px solid #e83015;
+  }
+  // Ikkonzome
+  &.color-6::before {
+    border-bottom: 2px solid #f4a7b9;
+  }
+  // akebono
+  &.color-7::before {
+    border-bottom: 2px solid #f19483;
+  }
+  // suoh
+  &.color-8::before {
+    border-bottom: 2px solid #8e354a;
+  }
+  // 赤
+  &.color-9::before {
+    border-bottom: 2px solid #cb4042;
+  }
+  // nanohana
+  &.color-10::before {
+    border-bottom: 2px solid #f7d94c;
+  }
+  // sabiseiji
+  &.color-11::before {
+    border-bottom: 2px solid #86a697;
+  }
+  // ‘sora’
+  &.color-12::before {
+    border-bottom: 2px solid #58b2dc;
+  }
+  // kamenozoki
+  &.color-13::before {
+    border-bottom: 2px solid #a5dee4;
+  }
+  // hanada
+  &.color-14::before {
+    border-bottom: 2px solid #006284;
+  }
+  // mizu
+  &.color-15::before {
+    border-bottom: 2px solid #81c7d4;
+  }
+  // asagi
+  &.color-16::before {
+    border-bottom: 2px solid #33a6b8;
+  }
+  // mizuasagi
+  &.color-17::before {
+    border-bottom: 2px solid #66bab7;
+  }
+  // hanaasagi
+  &.color-18::before {
+    border-bottom: 2px solid #1e88a8;
+  }
+  // chigusa
+  &.color-19::before {
+    border-bottom: 2px solid #3a8fb7;
+  }
+  // tsuyukus
+  &.color-20::before {
+    border-bottom: 2px solid #2ea9df;
+  }
+  // wasurenagusa
+  &.color-21::before {
+    border-bottom: 2px solid #7db9de;
+  }
+  // ruri
+  &.color-22::before {
+    border-bottom: 2px solid #005caf;
+  }
+  // gunjyo
+  &.color-23::before {
+    border-bottom: 2px solid #51a8dd;
+  }
+  // kuro
+  &.color-24::before {
+    border-bottom: 2px solid #080808;
+  }
+  // sumi
+  &.color-25::before {
+    border-bottom: 2px solid #1c1c1c;
+  }
+  // ro
+  &.color-26::before {
+    border-bottom: 2px solid #0c0c0c;
+  }
+  // Shironezumi
+  &.color-27::before {
+    border-bottom: 2px solid #bdc0ba;
+  }
+  // shironeri
+  &.color-28::before {
+    border-bottom: 2px solid #fcfaf2;
+  }
+  // gofun
+  &.color-29::before {
+    border-bottom: 2px solid #fffffb;
   }
 }
 
 // Javascript Action
+// .bgcolor {
+//   position: relative;
+// }
+
+.bgcolor {
+  position: relative;
+}
+
 .bgcolor::after {
   position: absolute;
-  left: 0;
-  bottom: 0;
-  transform: translate(-38%, 50%);
+  top: 0rem;
+  right: 0rem;
+  transform: translate(35%, -40%);
+  z-index: 5;
+}
+
+.bgcolor-long:after {
+  transform: translate(25%, -40%);
 }
 
 .bgcolor-1::after {
-  content: url(../AnimationBackup/circleImg/PNG/color1.png);
+  content: url(../image/circle/mizu.png);
 }
 
 .bgcolor-2::after {
-  content: url(../AnimationBackup/circleImg/PNG/color2.png);
+  content: url(../image/circle/sakura.png);
 }
 
 .bgcolor-3::after {
-  content: url(../AnimationBackup/circleImg/PNG/color3.png);
+  content: url(../image/circle/ichigo.png);
 }
 
 .bgcolor-4::after {
-  content: url(../AnimationBackup/circleImg/PNG/color4.png);
+  content: url(../image/circle/azuki.png);
+}
+
+.bgcolor-5::after {
+  content: url(../image/circle/syojyohi.png);
+  transform: translate(23%, -40%);
+}
+
+.bgcolor-6::after {
+  content: url(../image/circle/ikkonzome.png);
+  transform: translate(23%, -40%);
+}
+
+.bgcolor-7::after {
+  content: url(../image/circle/akebono.png);
+}
+
+.bgcolor-8::after {
+  content: url(../image/circle/suoh.png);
+}
+
+.bgcolor-9::after {
+  content: url(../image/circle/akabeni赤.png);
+  transform: translate(50%, -40%);
+}
+
+.bgcolor-10::after {
+  content: url(../image/circle/nanohana.png);
+  transform: translate(23%, -40%);
+}
+
+.bgcolor-11::after {
+  content: url(../image/circle/sabiseiji.png);
+  transform: translate(23%, -40%);
+}
+
+.bgcolor-12::after {
+  content: url(../image/circle/.png);
+}
+
+.bgcolor-13::after {
+  content: url(../image/circle/kamenozoki.png);
+  transform: translate(23%, -40%);
+}
+
+.bgcolor-14::after {
+  content: url(../image/circle/hanada.png);
+}
+
+.bgcolor-15::after {
+  content: url(../image/circle/mizu.png);
+}
+
+.bgcolor-16::after {
+  content: url(../image/circle/asagi.png);
+}
+
+.bgcolor-17::after {
+  content: url(../image/circle/mizuasagi.png);
+  transform: translate(23%, -40%);
+}
+
+.bgcolor-18::after {
+  content: url(../image/circle/hanaasagi.png);
+  transform: translate(23%, -40%);
+}
+
+.bgcolor-19::after {
+  content: url(../image/circle/chigusa.png);
+}
+
+.bgcolor-20::after {
+  content: url(../image/circle/tsuyukus.png);
+  transform: translate(23%, -40%);
+}
+
+.bgcolor-21::after {
+  content: url(../image/circle/wasurenagusa.png);
+  transform: translate(23%, -40%);
+}
+
+.bgcolor-22::after {
+  content: url(../image/circle/ruri.png);
+}
+
+.bgcolor-23::after {
+  content: url(../image/circle/gunjyo.png);
+}
+
+.bgcolor-24::after {
+  content: url(../image/circle/kuro.png);
+}
+
+.bgcolor-25::after {
+  content: url(../image/circle/sumi.png);
+}
+
+.bgcolor-26::after {
+  content: url(../image/circle/ro.png);
+}
+
+.bgcolor-27::after {
+  content: url(../image/circle/Shironezumi.png);
+  transform: translate(23%, -40%);
+}
+
+.bgcolor-28::after {
+  content: url(../image/circle/shironeri.png);
+  transform: translate(23%, -40%);
+}
+
+.bgcolor-29::after {
+  content: url(../image/circle/gofun.png);
 }
 
 // Animation
