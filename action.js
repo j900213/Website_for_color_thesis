@@ -1,14 +1,19 @@
 const innerCursor = document.querySelector(".cursor--small");
+let clientX = -100;
+let clientY = -100;
+
 const target = document.querySelectorAll(".magic-box");
+
 const links = document.querySelectorAll("a");
+let colorSaved;
+let borderSaved;
+
 const abstractSec = document.querySelector(".abstract-section");
 const titleStatic = document.querySelector(".main-static");
 const titleSticky = document.querySelector(".main-sticky");
 
-let clientX = -100;
-let clientY = -100;
-let colorSaved;
-let borderSaved;
+const sortButtons = document.querySelectorAll(".sort-buttons div button");
+console.log(sortButtons);
 
 /*--- Cursor Initilazation ---*/
 const initCursor = () => {
@@ -291,6 +296,16 @@ for (let i = 0; i < target.length; i++) {
     }, 2300);
   });
 }
+
+/*--- Sort Button Hovering Effect ---*/
+sortButtons.forEach((sortButton) => {
+  sortButton.addEventListener("mouseover", () => {
+    sortButton.parentNode.childNodes[3].style.display = `block`;
+  });
+  sortButton.addEventListener("mouseleave", () => {
+    sortButton.parentNode.childNodes[3].style.display = `none`;
+  });
+});
 
 initCursor();
 window.addEventListener("scroll", navBgChange);
