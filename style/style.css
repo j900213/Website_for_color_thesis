@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  font-family: "Arvo", "Noto Serif SC", serif;
+  font-family: "Arvo", "Noto Serif JP", serif;
   font-weight: 300;
   background: #fffef7;
   position: relative;
@@ -449,7 +449,7 @@ span.color-29::before {
 
 .main-sticky {
   display: none;
-  background: white;
+  background: #fffef7;
   position: fixed;
 }
 
@@ -1247,6 +1247,10 @@ span.color-29::before {
     -ms-flex-item-align: start;
         align-self: flex-start;
   }
+  .main-sticky .main-title {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
   .nav-chapter-no {
     font-size: 1.9rem;
   }
@@ -1318,10 +1322,11 @@ span.color-29::before {
   }
 }
 
+/*--- Header ---*/
 .color-header {
   position: relative;
   width: 100%;
-  min-height: 10vh;
+  min-height: 6.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1334,8 +1339,19 @@ span.color-29::before {
 }
 
 .color-title-wrapper {
-  background: white;
+  background: #fffef7;
   position: fixed;
+  width: 100%;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .color-title {
@@ -1351,6 +1367,7 @@ span.color-29::before {
 
 .sort-buttons {
   position: absolute;
+  z-index: 100;
   right: 1rem;
   top: 50%;
   display: -webkit-box;
@@ -1370,13 +1387,12 @@ span.color-29::before {
 }
 
 .sort-buttons button {
-  background: transparent;
   border: 1px solid black;
   border-radius: 50%;
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
   margin: 0rem 0.6rem;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   cursor: none;
@@ -1390,15 +1406,841 @@ span.color-29::before {
 .sort-buttons span {
   display: none;
   position: absolute;
-  bottom: -50%;
+  bottom: -75%;
   left: 50%;
   font-size: 1.3rem;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
 }
 
-/*--- Color Number Section ---*/
-.color-number-section {
-  min-height: 100vh;
+.sort-button-deactive {
+  background: transparent;
+  color: black;
+}
+
+.sort-button-active {
+  background: black;
+  color: white;
+}
+
+/*--- Categories ---*/
+.category-wrapper {
+  width: 92%;
+  margin: 8rem auto 0rem auto;
+}
+
+.category-wrapper .category-name {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.category-animal {
+  margin-top: 2rem;
+}
+
+/*--- Color Section ---*/
+.color-section {
+  width: 92%;
+  margin: 2rem auto;
+}
+
+main {
+  overflow: hidden;
+}
+
+.color-item-wrapper,
+.animal-part {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 10rem;
+  margin: 1.5rem 0.5rem;
+}
+
+.color-item-wrapper span,
+.animal-part span {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.color-none-wrapper .color-number {
+  display: none;
+}
+
+.color-block {
+  width: 100%;
+  height: 6rem;
+}
+
+.color-number,
+.alphabet {
+  position: absolute;
+  top: 9%;
+  left: 9%;
+}
+
+.alphabet-index {
+  display: none;
+}
+
+.alphabet-index .alphabet {
+  font-size: 1.3rem;
+}
+
+.alphabet-index .color-name,
+.alphabet-index .color-number {
+  display: none;
+}
+
+/*--- Section (De)active ---*/
+.deactive-part {
+  opacity: 0;
+  max-height: 0rem;
+  margin: 0;
+}
+
+.deactive-part div div {
+  z-index: -100;
+}
+
+.deactive-part h3 {
+  margin: 0;
+  max-height: 0rem;
+}
+
+.active-part {
+  opacity: 0;
+  -webkit-animation: box-fade 0.6s ease-in-out forwards 0s;
+          animation: box-fade 0.6s ease-in-out forwards 0s;
+}
+
+@-webkit-keyframes box-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes box-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*--- Color  Block Control ---*/
+.color-block-1 {
+  background: #dc9fb4;
+}
+
+.color-block-2 {
+  background: #e16b8c;
+}
+
+.color-block-3 {
+  background: #8e354a;
+}
+
+.color-block-4 {
+  background: #f8c3cd;
+}
+
+.color-block-5 {
+  background: #f4a7b9;
+}
+
+.color-block-6 {
+  background: #64363c;
+}
+
+.color-block-7 {
+  background: #f596aa;
+}
+
+.color-block-8 {
+  background: #b5495b;
+}
+
+.color-block-9 {
+  background: #e87a90;
+}
+
+.color-block-10 {
+  background: #d05a6e;
+}
+
+.color-block-11 {
+  background: #db4d6d;
+}
+
+.color-block-12 {
+  background: #fedfe1;
+}
+
+.color-block-14 {
+  background: #d0104c;
+}
+
+.color-block-15 {
+  background: #9f353a;
+}
+
+.color-block-16 {
+  background: #cb1b45;
+}
+
+.color-block-17 {
+  background: #eea9a9;
+}
+
+.color-block-18 {
+  background: #bf6766;
+}
+
+.color-block-19 {
+  background: #86473f;
+}
+
+.color-block-21 {
+  background: #eb7a77;
+}
+
+.color-block-22 {
+  background: #954a45;
+}
+
+.color-block-23 {
+  background: #a96360;
+}
+
+.color-block-24 {
+  background: #cb4042;
+}
+
+.color-block-25 {
+  background: #ab3b3a;
+}
+
+.color-block-27 {
+  background: #904840;
+}
+
+.color-block-29 {
+  background: #c73e3a;
+}
+
+.color-block-31 {
+  background: #994639;
+}
+
+.color-block-32 {
+  background: #f19483;
+}
+
+.color-block-33 {
+  background: #b54434;
+}
+
+.color-block-35 {
+  background: #f17c67;
+}
+
+.color-block-36 {
+  background: #884c3a;
+}
+
+.color-block-37 {
+  background: #e83015;
+}
+
+.color-block-38 {
+  background: #d75455;
+}
+
+.color-block-40 {
+  background: #854836;
+}
+
+.color-block-41 {
+  background: #a35e47;
+}
+
+.color-block-42 {
+  background: #cc543a;
+}
+
+.color-block-43 {
+  background: #724832;
+}
+
+.color-block-44 {
+  background: #f75c2f;
+}
+
+.color-block-46 {
+  background: #9a5034;
+}
+
+.color-block-47 {
+  background: #c46243;
+}
+
+.color-block-48 {
+  background: #af5f3c;
+}
+
+.color-block-49 {
+  background: #fb966e;
+}
+
+.color-block-53 {
+  background: #f05e1c;
+}
+
+.color-block-54 {
+  background: #ed784a;
+}
+
+.color-block-55 {
+  background: #ca7853;
+}
+
+.color-block-56 {
+  background: #b35c37;
+}
+
+.color-block-58 {
+  background: #e3916e;
+}
+
+.color-block-60 {
+  background: #f0a986;
+}
+
+.color-block-61 {
+  background: #a0674b;
+}
+
+.color-block-62 {
+  background: #c1693c;
+}
+
+.color-block-63 {
+  background: #fb9966;
+}
+
+.color-block-66 {
+  background: #e79460;
+}
+
+.color-block-68 {
+  background: #c78550;
+}
+
+.color-block-70 {
+  background: #e1a679;
+}
+
+.color-block-72 {
+  background: #fc9f4d;
+}
+
+.color-block-73 {
+  background: #ffba84;
+}
+
+.color-block-74 {
+  background: #e98b2a;
+}
+
+.color-block-75 {
+  background: #e9a368;
+}
+
+.color-block-76 {
+  background: #b17844;
+}
+
+.color-block-77 {
+  background: #96632e;
+}
+
+.color-block-79 {
+  background: #ca7a2c;
+}
+
+.color-block-80 {
+  background: #ecb88a;
+}
+
+.color-block-81 {
+  background: #78552b;
+}
+
+.color-block-82 {
+  background: #b07736;
+}
+
+.color-block-84 {
+  background: #e2943b;
+}
+
+.color-block-85 {
+  background: #c7802d;
+}
+
+.color-block-86 {
+  background: #9b6e23;
+}
+
+.color-block-88 {
+  background: #ebb471;
+}
+
+.color-block-89 {
+  background: #d7b98e;
+}
+
+.color-block-91 {
+  background: #b68e55;
+}
+
+.color-block-94 {
+  background: #c18a26;
+}
+
+.color-block-95 {
+  background: #ffb11b;
+}
+
+.color-block-96 {
+  background: #d19826;
+}
+
+.color-block-97 {
+  background: #dda52d;
+}
+
+.color-block-98 {
+  background: #c99833;
+}
+
+.color-block-99 {
+  background: #f9bf45;
+}
+
+.color-block-100 {
+  background: #dcb879;
+}
+
+.color-block-101 {
+  background: #ba9132;
+}
+
+.color-block-102 {
+  background: #e8b647;
+}
+
+.color-block-103 {
+  background: #f7c242;
+}
+
+.color-block-106 {
+  background: #fad689;
+}
+
+.color-block-107 {
+  background: #d9ab42;
+}
+
+.color-block-108 {
+  background: #f6c555;
+}
+
+.color-block-109 {
+  background: #ffc408;
+}
+
+.color-block-110 {
+  background: #efbb24;
+}
+
+.color-block-111 {
+  background: #caad5f;
+}
+
+.color-block-117 {
+  background: #a28c37;
+}
+
+.color-block-121 {
+  background: #e9cd4c;
+}
+
+.color-block-122 {
+  background: #f7d94c;
+}
+
+.color-block-123 {
+  background: #fbe251;
+}
+
+.color-block-126 {
+  background: #ddd23b;
+}
+
+.color-block-127 {
+  background: #a5a051;
+}
+
+.color-block-128 {
+  background: #bec23f;
+}
+
+.color-block-129 {
+  background: #6c6a2d;
+}
+
+.color-block-130 {
+  background: #939650;
+}
+
+.color-block-131 {
+  background: #838a2d;
+}
+
+.color-block-132 {
+  background: #b1b479;
+}
+
+.color-block-133 {
+  background: #616138;
+}
+
+.color-block-134 {
+  background: #4b4e2a;
+}
+
+.color-block-135 {
+  background: #5b622e;
+}
+
+.color-block-136 {
+  background: #4d5139;
+}
+
+.color-block-137 {
+  background: #89916b;
+}
+
+.color-block-138 {
+  background: #90b44b;
+}
+
+.color-block-139 {
+  background: #91ad70;
+}
+
+.color-block-140 {
+  background: #b5caa0;
+}
+
+.color-block-142 {
+  background: #7ba23f;
+}
+
+.color-block-143 {
+  background: #86c166;
+}
+
+.color-block-144 {
+  background: #4a593d;
+}
+
+.color-block-145 {
+  background: #42602d;
+}
+
+.color-block-146 {
+  background: #516e41;
+}
+
+.color-block-147 {
+  background: #91b493;
+}
+
+.color-block-149 {
+  background: #1b813e;
+}
+
+.color-block-150 {
+  background: #5dac81;
+}
+
+.color-block-151 {
+  background: #36563c;
+}
+
+.color-block-152 {
+  background: #227d51;
+}
+
+.color-block-153 {
+  background: #a8d8b9;
+}
+
+.color-block-154 {
+  background: #6a8372;
+}
+
+.color-block-155 {
+  background: #2d6d4b;
+}
+
+.color-block-156 {
+  background: #465d4c;
+}
+
+.color-block-157 {
+  background: #24936e;
+}
+
+.color-block-158 {
+  background: #86a697;
+}
+
+.color-block-159 {
+  background: #00896c;
+}
+
+.color-block-161 {
+  background: #20604f;
+}
+
+.color-block-162 {
+  background: #0f4c3a;
+}
+
+.color-block-163 {
+  background: #4f726c;
+}
+
+.color-block-164 {
+  background: #00aa90;
+}
+
+.color-block-165 {
+  background: #69b0ac;
+}
+
+.color-block-166 {
+  background: #26453d;
+}
+
+.color-block-167 {
+  background: #66bab7;
+}
+
+.color-block-168 {
+  background: #268785;
+}
+
+.color-block-169 {
+  background: #405b55;
+}
+
+.color-block-170 {
+  background: #305a56;
+}
+
+.color-block-171 {
+  background: #78c2c4;
+}
+
+.color-block-172 {
+  background: #376b6d;
+}
+
+.color-block-173 {
+  background: #a5dee4;
+}
+
+.color-block-174 {
+  background: #77969a;
+}
+
+.color-block-175 {
+  background: #6699a1;
+}
+
+.color-block-176 {
+  background: #81c7d4;
+}
+
+.color-block-177 {
+  background: #33a6b8;
+}
+
+.color-block-178 {
+  background: #0c4842;
+}
+
+.color-block-179 {
+  background: #0d5661;
+}
+
+.color-block-180 {
+  background: #0089a7;
+}
+
+.color-block-181 {
+  background: #336774;
+}
+
+.color-block-182 {
+  background: #255359;
+}
+
+.color-block-183 {
+  background: #1e88a8;
+}
+
+.color-block-185 {
+  background: #577c8a;
+}
+
+.color-block-186 {
+  background: #58b2dc;
+}
+
+.color-block-187 {
+  background: #2b5f75;
+}
+
+.color-block-188 {
+  background: #3a8fb7;
+}
+
+.color-block-189 {
+  background: #2e5c6e;
+}
+
+.color-block-190 {
+  background: #006284;
+}
+
+.color-block-191 {
+  background: #7db9de;
+}
+
+.color-block-192 {
+  background: #51a8dd;
+}
+
+.color-block-193 {
+  background: #2ea9df;
+}
+
+.color-block-195 {
+  background: #0f2540;
+}
+
+.color-block-196 {
+  background: #08192d;
+}
+
+.color-block-197 {
+  background: #005caf;
+}
+
+.color-block-198 {
+  background: #0b346e;
+}
+
+.color-block-202 {
+  background: #113285;
+}
+
+.color-block-233 {
+  background: #fcfaf2;
+}
+
+.color-block-234 {
+  background: #fffffb;
+}
+
+.color-block-235 {
+  background: #bdc0ba;
+}
+
+.color-block-248 {
+  background: #1c1c1c;
+}
+
+.color-block-249 {
+  background: #080808;
+}
+
+.color-block-250 {
+  background: #0c0c0c;
+}
+
+@media screen and (max-width: 882px) {
+  .color-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 100;
+    margin-bottom: 0rem;
+  }
+  .color-title-wrapper {
+    position: fixed;
+    background: #fffef7;
+  }
+  .sort-buttons {
+    position: relative;
+    top: 6rem;
+    right: auto;
+    margin-top: 1rem;
+    z-index: 50;
+  }
+  .category-animal {
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (max-width: 548px) {
+  .color-title-wrapper {
+    height: 10vh;
+  }
+  .color-title {
+    font-size: 1.9rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .sort-buttons {
+    top: 6.7rem;
+  }
+  .category-animal {
+    margin-top: 6rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

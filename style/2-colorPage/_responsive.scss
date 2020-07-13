@@ -1,0 +1,45 @@
+@media screen and (max-width: 882px) {
+  .color-header {
+    flex-direction: column;
+
+    z-index: 100;
+    //min-height: 10vh;
+    margin-bottom: 0rem;
+  }
+  .color-title-wrapper {
+    position: fixed;
+    background: #fffef7;
+  }
+
+  .sort-buttons {
+    position: relative;
+    top: 6rem;
+    right: auto;
+    margin-top: 1rem;
+    z-index: 50;
+  }
+
+  .category-animal {
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (max-width: 548px) {
+  .color-title-wrapper {
+    height: 10vh;
+  }
+  .color-title {
+    font-size: 1.9rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .sort-buttons {
+    top: 6.7rem;
+  }
+
+  .category-animal {
+    margin-top: 6rem;
+  }
+}
