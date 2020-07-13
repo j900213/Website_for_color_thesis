@@ -150,6 +150,8 @@ plantSection.classList.add("deactive-part");
 
 // Isotope Objects
 let isoAnimal = new Isotope(".color-grid-wrapper", {
+  percentPosition: true,
+  transitionDuration: "2s",
   itemSelector: ".animal-part",
   layoutMode: "fitRows",
   getSortData: {
@@ -160,6 +162,8 @@ let isoAnimal = new Isotope(".color-grid-wrapper", {
 });
 
 let isoTech = new Isotope(".color-grid-wrapper-tech", {
+  percentPosition: true,
+  transitionDuration: "2s",
   itemSelector: ".tech-part",
   layoutMode: "fitRows",
   getSortData: {
@@ -170,6 +174,8 @@ let isoTech = new Isotope(".color-grid-wrapper-tech", {
 });
 
 let isoMineral = new Isotope(".color-grid-wrapper-mineral", {
+  percentPosition: true,
+  transitionDuration: "2s",
   itemSelector: ".mineral-part",
   layoutMode: "fitRows",
   getSortData: {
@@ -179,9 +185,9 @@ let isoMineral = new Isotope(".color-grid-wrapper-mineral", {
   },
 });
 
-console.log(colorMainSection.style.height);
-
 let isoObject = new Isotope(".color-grid-wrapper-object", {
+  percentPosition: true,
+  transitionDuration: "2s",
   itemSelector: ".object-part",
   layoutMode: "fitRows",
   getSortData: {
@@ -192,6 +198,8 @@ let isoObject = new Isotope(".color-grid-wrapper-object", {
 });
 
 let isoPlant = new Isotope(".color-grid-wrapper-plant", {
+  percentPosition: true,
+  transitionDuration: "2s",
   itemSelector: ".plant-part",
   layoutMode: "fitRows",
   getSortData: {
@@ -207,10 +215,19 @@ isoMineral.arrange({ filter: ".mineral" });
 isoObject.arrange({ filter: ".objects" });
 isoPlant.arrange({ filter: ".plants" });
 
+// Select specific items for animations
+const techItems = document.querySelectorAll(
+  ".color-grid-wrapper-tech .technique"
+);
+const mineralItems = document.querySelectorAll(
+  ".color-grid-wrapper-mineral .mineral"
+);
+
 sortButtons.forEach((sortButton) => {
   sortButton.addEventListener("click", () => {
     if (sortButton.parentNode.classList.contains("sort-origin")) {
       // Filter Animal out
+      isoAnimal.arrange({ sortBy: "number" });
       isoAnimal.arrange({ filter: ".animal" });
 
       categoryDivAnimal.classList.remove("deactive-part");
@@ -223,8 +240,56 @@ sortButtons.forEach((sortButton) => {
       objectSection.classList.remove("deactive-part");
       plantSection.classList.remove("deactive-part");
 
-      techSection.classList.add("active-part");
-      mineralSection.classList.add("active-part");
+      techItems[0].classList.add("active-item-1");
+      techItems[1].classList.add("active-item-2");
+      techItems[2].classList.add("active-item-3");
+      techItems[3].classList.add("active-item-4");
+      techItems[4].classList.add("active-item-5");
+      techItems[5].classList.add("active-item-6");
+      techItems[6].classList.add("active-item-7");
+      techItems[7].classList.add("active-item-8");
+      techItems[8].classList.add("active-item-9");
+      techItems[9].classList.add("active-item-10");
+      techItems[10].classList.add("active-item-11");
+      techItems[11].classList.add("active-item-12");
+      techItems[12].classList.add("active-item-13");
+      techItems[13].classList.add("active-item-14");
+      techItems[14].classList.add("active-item-15");
+      techItems[15].classList.add("active-item-16");
+      techItems[16].classList.add("active-item-17");
+      techItems[17].classList.add("active-item-18");
+
+      mineralItems[0].classList.add("active-item-19");
+      mineralItems[1].classList.add("active-item-20");
+      mineralItems[2].classList.add("active-item-21");
+      mineralItems[3].classList.add("active-item-22");
+
+      setTimeout(function () {
+        techItems[0].classList.remove("active-item-1");
+        techItems[1].classList.remove("active-item-2");
+        techItems[2].classList.remove("active-item-3");
+        techItems[3].classList.remove("active-item-4");
+        techItems[4].classList.remove("active-item-5");
+        techItems[5].classList.remove("active-item-6");
+        techItems[6].classList.remove("active-item-7");
+        techItems[7].classList.remove("active-item-8");
+        techItems[8].classList.remove("active-item-9");
+        techItems[9].classList.remove("active-item-10");
+        techItems[10].classList.remove("active-item-11");
+        techItems[11].classList.remove("active-item-12");
+        techItems[12].classList.remove("active-item-13");
+        techItems[13].classList.remove("active-item-14");
+        techItems[14].classList.remove("active-item-15");
+        techItems[15].classList.remove("active-item-16");
+        techItems[16].classList.remove("active-item-17");
+        techItems[17].classList.remove("active-item-18");
+
+        mineralItems[0].classList.remove("active-item-19");
+        mineralItems[1].classList.remove("active-item-20");
+        mineralItems[2].classList.remove("active-item-21");
+        mineralItems[3].classList.remove("active-item-22");
+      }, 2000);
+
       objectSection.classList.add("active-part");
       plantSection.classList.add("active-part");
     } else {
@@ -242,10 +307,32 @@ sortButtons.forEach((sortButton) => {
       objectSection.classList.add("deactive-part");
       plantSection.classList.add("deactive-part");
 
-      techSection.classList.remove("active-part");
-      mineralSection.classList.remove("active-part");
       objectSection.classList.remove("active-part");
       plantSection.classList.remove("active-part");
+
+      //   techItems[0].classList.remove("active-item-1");
+      //   techItems[1].classList.remove("active-item-2");
+      //   techItems[2].classList.remove("active-item-3");
+      //   techItems[3].classList.remove("active-item-4");
+      //   techItems[4].classList.remove("active-item-5");
+      //   techItems[5].classList.remove("active-item-6");
+      //   techItems[6].classList.remove("active-item-7");
+      //   techItems[7].classList.remove("active-item-8");
+      //   techItems[8].classList.remove("active-item-9");
+      //   techItems[9].classList.remove("active-item-10");
+      //   techItems[10].classList.remove("active-item-11");
+      //   techItems[11].classList.remove("active-item-12");
+      //   techItems[12].classList.remove("active-item-13");
+      //   techItems[13].classList.remove("active-item-14");
+      //   techItems[14].classList.remove("active-item-15");
+      //   techItems[15].classList.remove("active-item-16");
+      //   techItems[16].classList.remove("active-item-17");
+      //   techItems[17].classList.remove("active-item-18");
+
+      //   mineralItems[0].classList.remove("active-item-19");
+      //   mineralItems[1].classList.remove("active-item-20");
+      //   mineralItems[2].classList.remove("active-item-21");
+      //   mineralItems[3].classList.remove("active-item-22");
 
       // Filter all the items
       isoAnimal.arrange({ filter: ".color-item-wrapper" });
@@ -278,3 +365,48 @@ sortButtons.forEach((sortButton) => {
     }
   });
 });
+
+// $(document).ready(function () {
+//   animateDiv($(".a"));
+// });
+
+// function makeNewPosition($container) {
+//   // Get viewport dimensions (remove the dimension of the div)
+//   var h = $container.height() - 50;
+//   var w = $container.width() - 50;
+
+//   var nh = Math.floor(Math.random() * h);
+//   var nw = Math.floor(Math.random() * w);
+
+//   return [nh, nw];
+// }
+
+// function animateDiv($target) {
+//   var newq = makeNewPosition($target.parent());
+//   var oldq = $target.offset();
+//   var speed = calcSpeed([oldq.top, oldq.left], newq);
+
+//   $target.animate(
+//     {
+//       top: newq[0],
+//       left: newq[1],
+//     },
+//     speed,
+//     function () {
+//       animateDiv($target);
+//     }
+//   );
+// }
+
+// function calcSpeed(prev, next) {
+//   var x = Math.abs(prev[1] - next[1]);
+//   var y = Math.abs(prev[0] - next[0]);
+
+//   var greatest = x > y ? x : y;
+
+//   var speedModifier = 0.1;
+
+//   var speed = Math.ceil(greatest / speedModifier);
+
+//   return speed;
+// }
