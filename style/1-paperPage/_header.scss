@@ -85,7 +85,7 @@
 
 .left-link {
   position: fixed;
-  left: -2rem;
+  left: -3.3rem;
   top: 50%;
   transform: rotate(90deg);
   transform-origin: center;
@@ -93,10 +93,14 @@
 
 .right-link {
   position: fixed;
-  right: -3rem;
+  right: -2rem;
   top: 50%;
   transform: rotate(-90deg);
   transform-origin: center;
+}
+
+.right-link.right-text {
+  right: -0.5rem;
 }
 
 .left-link-inner-wrapper a,

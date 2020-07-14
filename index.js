@@ -12,6 +12,13 @@ const abstractSec = document.querySelector(".abstract-section");
 const titleStatic = document.querySelector(".main-static");
 const titleSticky = document.querySelector(".main-sticky");
 
+// Mobile Navigation
+const mobileNav = document.querySelector(".mobile-nav");
+const titleLink = document.querySelector(".main-sticky h1 a");
+
+// Responsive width
+let screenWidth = window.matchMedia("(max-width: 548px)");
+
 /*--- Cursor Initilazation ---*/
 const initCursor = () => {
   // add listener to track the current mouse position
@@ -56,14 +63,35 @@ links.forEach((link) => {
 /*--- Navigation Background ---*/
 function navBgChange() {
   const abstractPos = abstractSec.getBoundingClientRect().top;
-  console.log(abstractPos);
   if (abstractPos > 0) {
     titleStatic.style.display = `flex`;
     titleSticky.style.display = `none`;
   } else {
     titleStatic.style.display = `none`;
     titleSticky.style.display = `flex`;
+    mobileNav.style.display = `none`;
   }
+}
+
+/*--- Mobile Dropdown ---*/
+if (screenWidth.matches) {
+  let indicator = false;
+  $(".main-title-wrapper.main-sticky h1 a").click(function () {
+    $(".mobile-nav").slideToggle("slow");
+    mobileNav.style.display = `flex`;
+    setTimeout(function () {
+      indicator = true;
+    }, 50);
+    indicator = false;
+  });
+  $("body:not(mobile-nav)").click(function () {
+    if (indicator) {
+      $(".mobile-nav").slideUp("slow");
+      indicator = false;
+    }
+  });
+} else {
+  titleLink.setAttribute("href", "#main");
 }
 
 /*--- Magic Fireworks ---*/

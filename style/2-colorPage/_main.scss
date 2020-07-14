@@ -12,10 +12,18 @@
   background: #fffef7;
   position: fixed;
   width: 100%;
-  z-index: 100;
+  z-index: 500;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &.mobile {
+    display: none;
+  }
+}
+
+.mobile-nav {
+  display: none;
 }
 
 .color-title {
@@ -31,7 +39,7 @@
 
 .sort-buttons {
   position: absolute;
-  z-index: 100;
+  z-index: 500;
   right: 1rem;
   top: 50%;
   display: flex;

@@ -16,6 +16,9 @@ const sortOrigin = document.querySelector(".sort-origin button");
 const sortNumber = document.querySelector(".sort-number button");
 const sortNone = document.querySelector(".sort-none button");
 
+// Mobile Navigation
+const mobileNav = document.querySelector(".mobile-nav");
+
 // Responsive width
 let screenWidth = window.matchMedia("(max-width: 548px)");
 
@@ -82,12 +85,23 @@ sortButtons.forEach((sortButton) => {
   });
 });
 
-/*--- Apperance initilazation (Cloud)---*/
-// Clound activated
-if (!screenWidth.matches) {
-  sortNone.classList.add("sort-button-active");
-} else {
-  sortNumber.classList.add("sort-button-active");
+/*--- Mobile Dropdown ---*/
+if (screenWidth.matches) {
+  let indicator = false;
+  $(".color-title-wrapper.mobile h1 a").click(function () {
+    $(".mobile-nav").slideToggle("slow");
+    mobileNav.style.display = `flex`;
+    setTimeout(function () {
+      indicator = true;
+    }, 50);
+    indicator = false;
+  });
+  $("body:not(mobile-nav)").click(function () {
+    if (indicator) {
+      $(".mobile-nav").slideUp("slow");
+      indicator = false;
+    }
+  });
 }
 
 /*--- Isotope Sorting ---*/
@@ -247,7 +261,9 @@ const mineralItems = document.querySelectorAll(
 // Select text part, don't display them when floating
 const colorBlock = document.querySelectorAll(".animal-part .color-block");
 const colorNum = document.querySelectorAll(".animal-part .color-number");
-const colorName = document.querySelectorAll(".animal-part .color-name");
+const colorName = document.querySelectorAll(
+  ".animal-part:not(.alphabet-index) .color-name"
+);
 const colorChinese = document.querySelectorAll(".animal-part .color-chinese");
 
 // Filter specific items out (preprocess)
@@ -442,7 +458,6 @@ sortButtons.forEach((sortButton) => {
 
 /*---  Div floating animation ---*/
 // Hide the name initially
-hideNameNum(colorName, colorChinese);
 
 function displayNameNum(colorName, colorChinese) {
   colorName.forEach((name) => {
@@ -485,14 +500,23 @@ const floatingItems = document.querySelectorAll(
 // Let divs start from the center
 colorMainSection.classList.remove("deactive-part");
 
+/*--- Apperance initilazation (Cloud)---*/
+// Clound activated
+if (!screenWidth.matches) {
+  sortNone.classList.add("sort-button-active");
+  hideNameNum(colorName, colorChinese);
+} else {
+  sortNumber.classList.add("sort-button-active");
+}
+
 // Initial floating
 let flag = true;
 
 console.log(screenWidth);
 if (flag && !screenWidth.matches) {
   floatingItems.forEach((item) => {
-    item.style.left = `50%`;
-    item.style.top = `30vh`;
+    item.style.left = `43vw`;
+    item.style.top = `35vh`;
   });
   cloudAnimation();
   flag = false;
@@ -509,8 +533,8 @@ function makeNewPosition($container) {
 
   console.log($container.height());
 
-  var nh = Math.ceil(Math.random() * h);
-  var nw = Math.ceil(Math.random() * w);
+  var nh = Math.floor(Math.random() * h);
+  var nw = Math.floor(Math.random() * w);
 
   return [nh, nw];
 }
@@ -591,7 +615,7 @@ function cloudAnimation() {
     animateDiv($(".color-item-33.animal-part"));
     animateDiv($(".color-item-35.animal-part"));
     animateDiv($(".color-item-36.animal-part"));
-  }, 50);
+  }, 80);
   setTimeout(function () {
     animateDiv($(".color-item-37.animal-part"));
     animateDiv($(".color-item-38.animal-part"));
@@ -615,7 +639,7 @@ function cloudAnimation() {
     animateDiv($(".color-item-63.animal-part"));
     animateDiv($(".color-item-66.animal-part"));
     animateDiv($(".color-item-68.animal-part"));
-  }, 100);
+  }, 160);
   setTimeout(function () {
     animateDiv($(".color-item-70.animal-part"));
     animateDiv($(".color-item-72.animal-part"));
@@ -641,7 +665,7 @@ function cloudAnimation() {
     animateDiv($(".color-item-98.animal-part"));
     animateDiv($(".color-item-99.animal-part"));
     animateDiv($(".color-item-100.animal-part"));
-  }, 150);
+  }, 240);
 
   setTimeout(function () {
     animateDiv($(".color-item-101.animal-part"));
@@ -667,7 +691,7 @@ function cloudAnimation() {
     animateDiv($(".color-item-133.animal-part"));
     animateDiv($(".color-item-134.animal-part"));
     animateDiv($(".color-item-135.animal-part"));
-  }, 200);
+  }, 320);
 
   setTimeout(function () {
     animateDiv($(".color-item-136.animal-part"));
@@ -705,7 +729,7 @@ function cloudAnimation() {
     animateDiv($(".color-item-171.animal-part"));
     animateDiv($(".color-item-172.animal-part"));
     animateDiv($(".color-item-173.animal-part"));
-  }, 250);
+  }, 400);
 
   setTimeout(function () {
     animateDiv($(".color-item-174.animal-part"));
@@ -738,170 +762,5 @@ function cloudAnimation() {
     animateDiv($(".color-item-248.animal-part"));
     animateDiv($(".color-item-249.animal-part"));
     animateDiv($(".color-item-250.animal-part"));
-  }, 300);
-
-  // animateDiv($(".color-item-1.animal-part"));
-  // animateDiv($(".color-item-2.animal-part"));
-  // animateDiv($(".color-item-3.animal-part"));
-  // animateDiv($(".color-item-4.animal-part"));
-  // animateDiv($(".color-item-5.animal-part"));
-  // animateDiv($(".color-item-6.animal-part"));
-  // animateDiv($(".color-item-7.animal-part"));
-  // animateDiv($(".color-item-8.animal-part"));
-  // animateDiv($(".color-item-9.animal-part"));
-  // animateDiv($(".color-item-10.animal-part"));
-  // animateDiv($(".color-item-11.animal-part"));
-  // animateDiv($(".color-item-12.animal-part"));
-  // animateDiv($(".color-item-14.animal-part"));
-  // animateDiv($(".color-item-15.animal-part"));
-  // animateDiv($(".color-item-16.animal-part"));
-  // animateDiv($(".color-item-17.animal-part"));
-  // animateDiv($(".color-item-18.animal-part"));
-  // animateDiv($(".color-item-19.animal-part"));
-  // animateDiv($(".color-item-21.animal-part"));
-  // animateDiv($(".color-item-22.animal-part"));
-  // animateDiv($(".color-item-23.animal-part"));
-  // animateDiv($(".color-item-24.animal-part"));
-  // animateDiv($(".color-item-25.animal-part"));
-  // animateDiv($(".color-item-27.animal-part"));
-  // animateDiv($(".color-item-29.animal-part"));
-  // animateDiv($(".color-item-31.animal-part"));
-  // animateDiv($(".color-item-32.animal-part"));
-  // animateDiv($(".color-item-33.animal-part"));
-  // animateDiv($(".color-item-35.animal-part"));
-  // animateDiv($(".color-item-36.animal-part"));
-  // animateDiv($(".color-item-37.animal-part"));
-  // animateDiv($(".color-item-38.animal-part"));
-  // animateDiv($(".color-item-40.animal-part"));
-  // animateDiv($(".color-item-41.animal-part"));
-  // animateDiv($(".color-item-42.animal-part"));
-  // animateDiv($(".color-item-43.animal-part"));
-  // animateDiv($(".color-item-44.animal-part"));
-  // animateDiv($(".color-item-46.animal-part"));
-  // animateDiv($(".color-item-47.animal-part"));
-  // animateDiv($(".color-item-48.animal-part"));
-  // animateDiv($(".color-item-49.animal-part"));
-  // animateDiv($(".color-item-53.animal-part"));
-  // animateDiv($(".color-item-54.animal-part"));
-  // animateDiv($(".color-item-55.animal-part"));
-  // animateDiv($(".color-item-56.animal-part"));
-  // animateDiv($(".color-item-58.animal-part"));
-  // animateDiv($(".color-item-60.animal-part"));
-  // animateDiv($(".color-item-61.animal-part"));
-  // animateDiv($(".color-item-62.animal-part"));
-  // animateDiv($(".color-item-63.animal-part"));
-  // animateDiv($(".color-item-66.animal-part"));
-  // animateDiv($(".color-item-68.animal-part"));
-  // animateDiv($(".color-item-70.animal-part"));
-  // animateDiv($(".color-item-72.animal-part"));
-  // animateDiv($(".color-item-73.animal-part"));
-  // animateDiv($(".color-item-74.animal-part"));
-  // animateDiv($(".color-item-75.animal-part"));
-  // animateDiv($(".color-item-76.animal-part"));
-  // animateDiv($(".color-item-77.animal-part"));
-  // animateDiv($(".color-item-79.animal-part"));
-  // animateDiv($(".color-item-80.animal-part"));
-  // animateDiv($(".color-item-81.animal-part"));
-  // animateDiv($(".color-item-82.animal-part"));
-  // animateDiv($(".color-item-84.animal-part"));
-  // animateDiv($(".color-item-85.animal-part"));
-  // animateDiv($(".color-item-86.animal-part"));
-  // animateDiv($(".color-item-88.animal-part"));
-  // animateDiv($(".color-item-89.animal-part"));
-  // animateDiv($(".color-item-91.animal-part"));
-  // animateDiv($(".color-item-94.animal-part"));
-  // animateDiv($(".color-item-95.animal-part"));
-  // animateDiv($(".color-item-96.animal-part"));
-  // animateDiv($(".color-item-97.animal-part"));
-  // animateDiv($(".color-item-98.animal-part"));
-  // animateDiv($(".color-item-99.animal-part"));
-  // animateDiv($(".color-item-100.animal-part"));
-  // animateDiv($(".color-item-101.animal-part"));
-  // animateDiv($(".color-item-102.animal-part"));
-  // animateDiv($(".color-item-103.animal-part"));
-  // animateDiv($(".color-item-106.animal-part"));
-  // animateDiv($(".color-item-107.animal-part"));
-  // animateDiv($(".color-item-108.animal-part"));
-  // animateDiv($(".color-item-109.animal-part"));
-  // animateDiv($(".color-item-110.animal-part"));
-  // animateDiv($(".color-item-111.animal-part"));
-  // animateDiv($(".color-item-117.animal-part"));
-  // animateDiv($(".color-item-121.animal-part"));
-  // animateDiv($(".color-item-122.animal-part"));
-  // animateDiv($(".color-item-123.animal-part"));
-  // animateDiv($(".color-item-126.animal-part"));
-  // animateDiv($(".color-item-127.animal-part"));
-  // animateDiv($(".color-item-128.animal-part"));
-  // animateDiv($(".color-item-129.animal-part"));
-  // animateDiv($(".color-item-130.animal-part"));
-  // animateDiv($(".color-item-131.animal-part"));
-  // animateDiv($(".color-item-132.animal-part"));
-  // animateDiv($(".color-item-133.animal-part"));
-  // animateDiv($(".color-item-134.animal-part"));
-  // animateDiv($(".color-item-135.animal-part"));
-  // animateDiv($(".color-item-136.animal-part"));
-  // animateDiv($(".color-item-137.animal-part"));
-  // animateDiv($(".color-item-138.animal-part"));
-  // animateDiv($(".color-item-139.animal-part"));
-  // animateDiv($(".color-item-140.animal-part"));
-  // animateDiv($(".color-item-142.animal-part"));
-  // animateDiv($(".color-item-143.animal-part"));
-  // animateDiv($(".color-item-144.animal-part"));
-  // animateDiv($(".color-item-145.animal-part"));
-  // animateDiv($(".color-item-146.animal-part"));
-  // animateDiv($(".color-item-147.animal-part"));
-  // animateDiv($(".color-item-149.animal-part"));
-  // animateDiv($(".color-item-150.animal-part"));
-  // animateDiv($(".color-item-151.animal-part"));
-  // animateDiv($(".color-item-152.animal-part"));
-  // animateDiv($(".color-item-153.animal-part"));
-  // animateDiv($(".color-item-154.animal-part"));
-  // animateDiv($(".color-item-155.animal-part"));
-  // animateDiv($(".color-item-156.animal-part"));
-  // animateDiv($(".color-item-157.animal-part"));
-  // animateDiv($(".color-item-158.animal-part"));
-  // animateDiv($(".color-item-159.animal-part"));
-  // animateDiv($(".color-item-161.animal-part"));
-  // animateDiv($(".color-item-162.animal-part"));
-  // animateDiv($(".color-item-163.animal-part"));
-  // animateDiv($(".color-item-164.animal-part"));
-  // animateDiv($(".color-item-165.animal-part"));
-  // animateDiv($(".color-item-166.animal-part"));
-  // animateDiv($(".color-item-167.animal-part"));
-  // animateDiv($(".color-item-168.animal-part"));
-  // animateDiv($(".color-item-169.animal-part"));
-  // animateDiv($(".color-item-170.animal-part"));
-  // animateDiv($(".color-item-171.animal-part"));
-  // animateDiv($(".color-item-172.animal-part"));
-  // animateDiv($(".color-item-173.animal-part"));
-  // animateDiv($(".color-item-174.animal-part"));
-  // animateDiv($(".color-item-175.animal-part"));
-  // animateDiv($(".color-item-176.animal-part"));
-  // animateDiv($(".color-item-177.animal-part"));
-  // animateDiv($(".color-item-178.animal-part"));
-  // animateDiv($(".color-item-179.animal-part"));
-  // animateDiv($(".color-item-180.animal-part"));
-  // animateDiv($(".color-item-181.animal-part"));
-  // animateDiv($(".color-item-182.animal-part"));
-  // animateDiv($(".color-item-183.animal-part"));
-  // animateDiv($(".color-item-185.animal-part"));
-  // animateDiv($(".color-item-186.animal-part"));
-  // animateDiv($(".color-item-187.animal-part"));
-  // animateDiv($(".color-item-188.animal-part"));
-  // animateDiv($(".color-item-189.animal-part"));
-  // animateDiv($(".color-item-190.animal-part"));
-  // animateDiv($(".color-item-191.animal-part"));
-  // animateDiv($(".color-item-192.animal-part"));
-  // animateDiv($(".color-item-193.animal-part"));
-  // animateDiv($(".color-item-195.animal-part"));
-  // animateDiv($(".color-item-196.animal-part"));
-  // animateDiv($(".color-item-197.animal-part"));
-  // animateDiv($(".color-item-198.animal-part"));
-  // animateDiv($(".color-item-202.animal-part"));
-  // animateDiv($(".color-item-233.animal-part"));
-  // animateDiv($(".color-item-234.animal-part"));
-  // animateDiv($(".color-item-235.animal-part"));
-  // animateDiv($(".color-item-248.animal-part"));
-  // animateDiv($(".color-item-249.animal-part"));
-  // animateDiv($(".color-item-250.animal-part"));
+  }, 480);
 }
