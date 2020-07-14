@@ -500,7 +500,7 @@ span.color-29::before {
 
 .left-link {
   position: fixed;
-  left: -2rem;
+  left: -3.3rem;
   top: 50%;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
@@ -510,12 +510,16 @@ span.color-29::before {
 
 .right-link {
   position: fixed;
-  right: -3rem;
+  right: -2rem;
   top: 50%;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   -webkit-transform-origin: center;
           transform-origin: center;
+}
+
+.right-link.right-text {
+  right: -0.5rem;
 }
 
 .left-link-inner-wrapper a,
@@ -1342,7 +1346,7 @@ span.color-29::before {
   background: #fffef7;
   position: fixed;
   width: 100%;
-  z-index: 100;
+  z-index: 500;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1352,6 +1356,14 @@ span.color-29::before {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.color-title-wrapper.mobile {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
 }
 
 .color-title {
@@ -1367,7 +1379,7 @@ span.color-29::before {
 
 .sort-buttons {
   position: absolute;
-  z-index: 100;
+  z-index: 500;
   right: 1rem;
   top: 50%;
   display: -webkit-box;
@@ -2759,7 +2771,7 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    z-index: 100;
+    z-index: 500;
     margin-bottom: 0rem;
   }
   .color-title-wrapper {
@@ -2781,6 +2793,12 @@ main {
 @media screen and (max-width: 548px) {
   .color-title-wrapper {
     height: 6.7rem;
+    display: none;
+  }
+  .color-title-wrapper.mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .color-title {
     font-size: 1.9rem;
@@ -2788,6 +2806,36 @@ main {
     margin-right: 5%;
     margin-top: 1rem;
     margin-bottom: 2rem;
+  }
+  .mobile-nav {
+    position: fixed;
+    width: 100vw;
+    height: 25vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    top: 5rem;
+    list-style-type: none;
+    background: #fffef7;
+    z-index: 1000;
+  }
+  .mobile-nav li {
+    font-size: 1.7rem;
+    margin: 2rem 0rem;
+  }
+  .mobile-nav li a {
+    text-decoration: none;
+    color: black;
+  }
+  .mobile-nav li a:hover {
+    color: #444444;
   }
   .sort-buttons {
     top: 6.7rem;
