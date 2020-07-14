@@ -244,6 +244,12 @@ const mineralItems = document.querySelectorAll(
   ".color-grid-wrapper-mineral .mineral"
 );
 
+// Select text part, don't display them when floating
+const colorBlock = document.querySelectorAll(".animal-part .color-block");
+const colorNum = document.querySelectorAll(".animal-part .color-number");
+const colorName = document.querySelectorAll(".animal-part .color-name");
+const colorChinese = document.querySelectorAll(".animal-part .color-chinese");
+
 // Filter specific items out (preprocess)
 isoTech.arrange({ filter: ".technique" });
 isoMineral.arrange({ filter: ".mineral" });
@@ -258,6 +264,9 @@ sortButtons.forEach((sortButton) => {
     if (sortButton.parentNode.classList.contains("sort-origin")) {
       // Set the global height to default
       globalMain.style.maxHeight = `100%`;
+
+      // Display Name and Number
+      displayNameNum(colorName, colorChinese);
 
       // Filter Animal out
       isoAnimal.arrange({ sortBy: "number" });
@@ -330,6 +339,10 @@ sortButtons.forEach((sortButton) => {
       plantSection.classList.add("active-part");
     } else if (sortButton.parentNode.classList.contains("sort-none")) {
       globalMain.style.maxHeight = `100vh`;
+
+      // Hide name and number
+      hideNameNum(colorName, colorChinese);
+
       // Hide the extra sections
       categoryDivAnimal.classList.add("deactive-part");
       categoryDivTech.classList.add("deactive-part");
@@ -371,6 +384,9 @@ sortButtons.forEach((sortButton) => {
       }
     } else {
       originFlag = false;
+
+      // Display Name and Number
+      displayNameNum(colorName, colorChinese);
 
       // Set the global height to default
       globalMain.style.maxHeight = `100%`;
@@ -425,10 +441,41 @@ sortButtons.forEach((sortButton) => {
 });
 
 /*---  Div floating animation ---*/
-// Select text part, don't display them when floating
-const colorNum = document.querySelectorAll(".animal-part .color-number");
-const colorName = document.querySelectorAll(".animal-part .color-name");
-const colorChinese = document.querySelectorAll(".animal-part .color-chinese");
+// Hide the name initially
+hideNameNum(colorName, colorChinese);
+
+function displayNameNum(colorName, colorChinese) {
+  colorName.forEach((name) => {
+    name.style.display = `block`;
+  });
+
+  colorChinese.forEach((chinese) => {
+    chinese.style.display = `block`;
+  });
+}
+
+function hideNameNum(colorName, colorChinese) {
+  colorName.forEach((name) => {
+    name.style.display = `none`;
+  });
+
+  colorChinese.forEach((chinese) => {
+    chinese.style.display = `none`;
+  });
+}
+
+// Zindex setting to prevent overlapping
+let i = 10;
+colorNum.forEach((number) => {
+  number.style.zIndex = `${i}`;
+  i++;
+});
+
+i = 9;
+colorBlock.forEach((block) => {
+  block.style.zIndex = `${i}`;
+  i++;
+});
 
 // Select floating items
 const floatingItems = document.querySelectorAll(
@@ -445,7 +492,7 @@ console.log(screenWidth);
 if (flag && !screenWidth.matches) {
   floatingItems.forEach((item) => {
     item.style.left = `50%`;
-    item.style.top = `25vh`;
+    item.style.top = `30vh`;
   });
   cloudAnimation();
   flag = false;
@@ -457,8 +504,8 @@ if (flag && !screenWidth.matches) {
 function makeNewPosition($container) {
   // Get viewport dimensions (remove the dimension of the div)
   $container = $(window);
-  var h = $container.height() - 250;
-  var w = $container.width() - 280;
+  var h = $container.height() - 170;
+  var w = $container.width() - 250;
 
   console.log($container.height());
 
