@@ -1263,7 +1263,7 @@ span.color-29::before {
   .mobile-nav {
     position: fixed;
     width: 100vw;
-    height: 25vh;
+    height: 18rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1274,10 +1274,13 @@ span.color-29::before {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    top: 6rem;
+    top: 5.5rem;
     list-style-type: none;
     background: #fffef7;
     z-index: 1000;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
   }
   .mobile-nav li {
     font-size: 1.7rem;
@@ -2837,8 +2840,6 @@ main {
   .color-title-wrapper {
     height: 6.7rem;
     display: none;
-    padding-top: 1rem;
-    margin-bottom: 1rem;
   }
   .color-title-wrapper.mobile {
     display: -webkit-box;
@@ -2849,7 +2850,7 @@ main {
     font-size: 1.9rem;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
   }
   .sort-buttons {
