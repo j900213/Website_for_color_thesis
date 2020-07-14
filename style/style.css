@@ -2795,5 +2795,8 @@ main {
   .category-animal {
     margin-top: 6rem;
   }
+  .sort-none {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
