@@ -1292,7 +1292,10 @@ span.color-29::before {
   }
   .mobile-nav.text {
     z-index: 99;
-    height: 25rem;
+    height: 21rem;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
     top: 2rem;
   }
   .nav-chapter-no {
