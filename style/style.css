@@ -1254,6 +1254,11 @@ span.color-29::before {
   .main-sticky .main-title {
     margin-left: 5%;
     margin-right: 5%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .main-title-wrapper {
+    z-index: 100;
   }
   .mobile-nav {
     position: fixed;
@@ -1269,7 +1274,7 @@ span.color-29::before {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    top: 5rem;
+    top: 6rem;
     list-style-type: none;
     background: #fffef7;
     z-index: 1000;
@@ -1286,7 +1291,9 @@ span.color-29::before {
     color: #444444;
   }
   .mobile-nav.text {
-    top: 8%;
+    z-index: 99;
+    height: 25rem;
+    top: 2rem;
   }
   .nav-chapter-no {
     font-size: 1.9rem;
@@ -2827,6 +2834,8 @@ main {
   .color-title-wrapper {
     height: 6.7rem;
     display: none;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
   }
   .color-title-wrapper.mobile {
     display: -webkit-box;

@@ -173,7 +173,9 @@ globalMain.appendChild(categoryDivPlant);
 globalMain.appendChild(plantSection);
 
 // Initial view height
-globalMain.style.maxHeight = `100vh`;
+if (!screenWidth.matches) {
+  globalMain.style.maxHeight = `100vh`;
+}
 
 // Initialize clone sections and titles as deactive
 categoryDivAnimal.classList.add("deactive-part");
