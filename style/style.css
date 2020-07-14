@@ -1255,6 +1255,39 @@ span.color-29::before {
     margin-left: 5%;
     margin-right: 5%;
   }
+  .mobile-nav {
+    position: fixed;
+    width: 100vw;
+    height: 25vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    top: 5rem;
+    list-style-type: none;
+    background: #fffef7;
+    z-index: 1000;
+  }
+  .mobile-nav li {
+    font-size: 1.7rem;
+    margin: 2rem 0rem;
+  }
+  .mobile-nav li a {
+    text-decoration: none;
+    color: black;
+  }
+  .mobile-nav li a:hover {
+    color: #444444;
+  }
+  .mobile-nav.text {
+    top: 5vh;
+  }
   .nav-chapter-no {
     font-size: 1.9rem;
   }
@@ -2806,36 +2839,6 @@ main {
     margin-right: 5%;
     margin-top: 1rem;
     margin-bottom: 2rem;
-  }
-  .mobile-nav {
-    position: fixed;
-    width: 100vw;
-    height: 25vh;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    top: 5rem;
-    list-style-type: none;
-    background: #fffef7;
-    z-index: 1000;
-  }
-  .mobile-nav li {
-    font-size: 1.7rem;
-    margin: 2rem 0rem;
-  }
-  .mobile-nav li a {
-    text-decoration: none;
-    color: black;
-  }
-  .mobile-nav li a:hover {
-    color: #444444;
   }
   .sort-buttons {
     top: 6.7rem;
