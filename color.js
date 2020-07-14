@@ -445,7 +445,7 @@ console.log(screenWidth);
 if (flag && !screenWidth.matches) {
   floatingItems.forEach((item) => {
     item.style.left = `50%`;
-    item.style.top = `35vh`;
+    item.style.top = `25vh`;
   });
   cloudAnimation();
   flag = false;
@@ -457,8 +457,8 @@ if (flag && !screenWidth.matches) {
 function makeNewPosition($container) {
   // Get viewport dimensions (remove the dimension of the div)
   $container = $(window);
-  var h = $container.height() - 150;
-  var w = $container.width() - 230;
+  var h = $container.height() - 250;
+  var w = $container.width() - 280;
 
   console.log($container.height());
 
