@@ -1,12 +1,23 @@
+/*--- DOM Selector ---*/
+// Items for mouse Animation
 const innerCursor = document.querySelector(".cursor--small");
 let clientX = -100;
 let clientY = -100;
 
+// Items for link Hovering
 const links = document.querySelectorAll("a");
 let colorSaved;
 let borderSaved;
 
+// Items for button hovering effect
 const sortButtons = document.querySelectorAll(".sort-buttons div button");
+const sortName = document.querySelector(".sort-alphabetic button");
+const sortOrigin = document.querySelector(".sort-origin button");
+const sortNumber = document.querySelector(".sort-number button");
+const sortNone = document.querySelector(".sort-none button");
+
+// Responsive width
+let screenWidth = window.matchMedia("(max-width: 548px)");
 
 /*--- Cursor Initilazation ---*/
 const initCursor = () => {
@@ -71,6 +82,14 @@ sortButtons.forEach((sortButton) => {
   });
 });
 
+/*--- Apperance initilazation (Cloud)---*/
+// Clound activated
+if (!screenWidth.matches) {
+  sortNone.classList.add("sort-button-active");
+} else {
+  sortNumber.classList.add("sort-button-active");
+}
+
 /*--- Isotope Sorting ---*/
 // Global selection
 // <main>
@@ -123,9 +142,11 @@ categoryDivPlant.classList.add("category-plant");
 // Change the title HTML
 categoryDivTech.children[0].innerHTML = "Dye and extract technique";
 categoryDivMineral.children[0].innerHTML = "Mineral";
-categoryDivObject.children[0].innerHTML = "Objects and languages";
-categoryDivPlant.children[0].innerHTML =
-  "Plants / Flowers / Trees / Leefs / Grains";
+categoryDivObject.children[0].innerHTML = "Suffix";
+categoryDivPlant.children[0].innerHTML = "Nature";
+
+// Initial hiding
+globalMain.style.display = `none`;
 
 // Append clone sections and ttiles tp the main
 globalMain.appendChild(categoryDivTech);
@@ -136,6 +157,9 @@ globalMain.appendChild(categoryDivObject);
 globalMain.appendChild(objectSection);
 globalMain.appendChild(categoryDivPlant);
 globalMain.appendChild(plantSection);
+
+// Initial view height
+globalMain.style.maxHeight = `100vh`;
 
 // Initialize clone sections and titles as deactive
 categoryDivAnimal.classList.add("deactive-part");
@@ -209,11 +233,8 @@ let isoPlant = new Isotope(".color-grid-wrapper-plant", {
   },
 });
 
-// Filter specific items out (preprocess)
-isoTech.arrange({ filter: ".technique" });
-isoMineral.arrange({ filter: ".mineral" });
-isoObject.arrange({ filter: ".objects" });
-isoPlant.arrange({ filter: ".plants" });
+// Show the body
+globalMain.style.display = `block`;
 
 // Select specific items for animations
 const techItems = document.querySelectorAll(
@@ -223,9 +244,21 @@ const mineralItems = document.querySelectorAll(
   ".color-grid-wrapper-mineral .mineral"
 );
 
+// Filter specific items out (preprocess)
+isoTech.arrange({ filter: ".technique" });
+isoMineral.arrange({ filter: ".mineral" });
+isoObject.arrange({ filter: ".objects" });
+isoPlant.arrange({ filter: ".plants" });
+
+// Check if sort origin is previously active
+let originFlag = false;
+
 sortButtons.forEach((sortButton) => {
   sortButton.addEventListener("click", () => {
     if (sortButton.parentNode.classList.contains("sort-origin")) {
+      // Set the global height to default
+      globalMain.style.maxHeight = `100%`;
+
       // Filter Animal out
       isoAnimal.arrange({ sortBy: "number" });
       isoAnimal.arrange({ filter: ".animal" });
@@ -264,6 +297,9 @@ sortButtons.forEach((sortButton) => {
       mineralItems[2].classList.add("active-item-21");
       mineralItems[3].classList.add("active-item-22");
 
+      // Mark the origin flag as true
+      originFlag = true;
+
       setTimeout(function () {
         techItems[0].classList.remove("active-item-1");
         techItems[1].classList.remove("active-item-2");
@@ -292,7 +328,53 @@ sortButtons.forEach((sortButton) => {
 
       objectSection.classList.add("active-part");
       plantSection.classList.add("active-part");
+    } else if (sortButton.parentNode.classList.contains("sort-none")) {
+      globalMain.style.maxHeight = `100vh`;
+      // Hide the extra sections
+      categoryDivAnimal.classList.add("deactive-part");
+      categoryDivTech.classList.add("deactive-part");
+      categoryDivMineral.classList.add("deactive-part");
+      categoryDivObject.classList.add("deactive-part");
+      categoryDivPlant.classList.add("deactive-part");
+      techSection.classList.add("deactive-part");
+      mineralSection.classList.add("deactive-part");
+      objectSection.classList.add("deactive-part");
+      plantSection.classList.add("deactive-part");
+
+      objectSection.classList.remove("active-part");
+      plantSection.classList.remove("active-part");
+
+      // Filter all the items
+      if (originFlag) {
+        // Compromised solution when the previous state is Origin
+        originFlag = false;
+        isoAnimal.arrange({ filter: ".color-item-wrapper" });
+        colorNone.forEach((item) => {
+          item.style.display = `none`;
+        });
+        alphaIndex.forEach((item) => {
+          item.style.display = `none`;
+        });
+        setTimeout(function () {
+          cloudAnimation();
+        }, 2050);
+      } else {
+        // When the previous state is Name or Number
+        originFlag = false;
+        colorNone.forEach((item) => {
+          item.style.display = `none`;
+        });
+        alphaIndex.forEach((item) => {
+          item.style.display = `none`;
+        });
+        cloudAnimation();
+      }
     } else {
+      originFlag = false;
+
+      // Set the global height to default
+      globalMain.style.maxHeight = `100%`;
+
       // Get the sort Value
       const sortValue = event.target.getAttribute("data-sort-value");
 
@@ -309,30 +391,6 @@ sortButtons.forEach((sortButton) => {
 
       objectSection.classList.remove("active-part");
       plantSection.classList.remove("active-part");
-
-      //   techItems[0].classList.remove("active-item-1");
-      //   techItems[1].classList.remove("active-item-2");
-      //   techItems[2].classList.remove("active-item-3");
-      //   techItems[3].classList.remove("active-item-4");
-      //   techItems[4].classList.remove("active-item-5");
-      //   techItems[5].classList.remove("active-item-6");
-      //   techItems[6].classList.remove("active-item-7");
-      //   techItems[7].classList.remove("active-item-8");
-      //   techItems[8].classList.remove("active-item-9");
-      //   techItems[9].classList.remove("active-item-10");
-      //   techItems[10].classList.remove("active-item-11");
-      //   techItems[11].classList.remove("active-item-12");
-      //   techItems[12].classList.remove("active-item-13");
-      //   techItems[13].classList.remove("active-item-14");
-      //   techItems[14].classList.remove("active-item-15");
-      //   techItems[15].classList.remove("active-item-16");
-      //   techItems[16].classList.remove("active-item-17");
-      //   techItems[17].classList.remove("active-item-18");
-
-      //   mineralItems[0].classList.remove("active-item-19");
-      //   mineralItems[1].classList.remove("active-item-20");
-      //   mineralItems[2].classList.remove("active-item-21");
-      //   mineralItems[3].classList.remove("active-item-22");
 
       // Filter all the items
       isoAnimal.arrange({ filter: ".color-item-wrapper" });
@@ -366,47 +424,257 @@ sortButtons.forEach((sortButton) => {
   });
 });
 
-// $(document).ready(function () {
-//   animateDiv($(".a"));
-// });
+/*---  Div floating animation ---*/
+// Select text part, don't display them when floating
+const colorNum = document.querySelectorAll(".animal-part .color-number");
+const colorName = document.querySelectorAll(".animal-part .color-name");
+const colorChinese = document.querySelectorAll(".animal-part .color-chinese");
 
-// function makeNewPosition($container) {
-//   // Get viewport dimensions (remove the dimension of the div)
-//   var h = $container.height() - 50;
-//   var w = $container.width() - 50;
+// Select floating items
+const floatingItems = document.querySelectorAll(
+  ".color-item-wrapper.animal-part"
+);
 
-//   var nh = Math.floor(Math.random() * h);
-//   var nw = Math.floor(Math.random() * w);
+// Let divs start from the center
+colorMainSection.classList.remove("deactive-part");
 
-//   return [nh, nw];
-// }
+// Initial floating
+let flag = true;
 
-// function animateDiv($target) {
-//   var newq = makeNewPosition($target.parent());
-//   var oldq = $target.offset();
-//   var speed = calcSpeed([oldq.top, oldq.left], newq);
+console.log(screenWidth);
+if (flag && !screenWidth.matches) {
+  floatingItems.forEach((item) => {
+    item.style.left = `50%`;
+    item.style.top = `35vh`;
+  });
+  cloudAnimation();
+  flag = false;
+} else {
+  // Responsive version (No cloud)
+  isoAnimal.arrange({ sortBy: "number" });
+}
 
-//   $target.animate(
-//     {
-//       top: newq[0],
-//       left: newq[1],
-//     },
-//     speed,
-//     function () {
-//       animateDiv($target);
-//     }
-//   );
-// }
+function makeNewPosition($container) {
+  // Get viewport dimensions (remove the dimension of the div)
+  $container = $(window);
+  var h = $container.height() - 150;
+  var w = $container.width() - 230;
 
-// function calcSpeed(prev, next) {
-//   var x = Math.abs(prev[1] - next[1]);
-//   var y = Math.abs(prev[0] - next[0]);
+  console.log($container.height());
 
-//   var greatest = x > y ? x : y;
+  var nh = Math.ceil(Math.random() * h);
+  var nw = Math.ceil(Math.random() * w);
 
-//   var speedModifier = 0.1;
+  return [nh, nw];
+}
 
-//   var speed = Math.ceil(greatest / speedModifier);
+function animateDiv($target) {
+  var newq = makeNewPosition($target.parent());
+  var oldq = $target.offset();
+  var speed = calcSpeed([oldq.top, oldq.left], newq);
 
-//   return speed;
-// }
+  // When cloud is not clicked
+  $(".sort-alphabetic button").click(function () {
+    $target.stop();
+  });
+
+  $(".sort-number button").click(function () {
+    $target.stop();
+  });
+
+  $(".sort-origin button").click(function () {
+    $target.stop();
+  });
+
+  $target.animate(
+    {
+      top: newq[0],
+      left: newq[1],
+    },
+    speed,
+    function () {
+      //requestAnimationFrame(animateDiv($target));
+      //animateDiv($target);
+    }
+  );
+}
+
+function calcSpeed(prev, next) {
+  var x = Math.abs(prev[1] - next[1]);
+  var y = Math.abs(prev[0] - next[0]);
+
+  var greatest = x > y ? x : y;
+
+  var speedModifier = 0.07;
+
+  var speed = Math.ceil(greatest / speedModifier);
+
+  return speed;
+}
+
+function cloudAnimation() {
+  animateDiv($(".color-item-1.animal-part"));
+  animateDiv($(".color-item-2.animal-part"));
+  animateDiv($(".color-item-3.animal-part"));
+  animateDiv($(".color-item-4.animal-part"));
+  animateDiv($(".color-item-5.animal-part"));
+  animateDiv($(".color-item-6.animal-part"));
+  animateDiv($(".color-item-7.animal-part"));
+  animateDiv($(".color-item-8.animal-part"));
+  animateDiv($(".color-item-9.animal-part"));
+  animateDiv($(".color-item-10.animal-part"));
+  animateDiv($(".color-item-11.animal-part"));
+  animateDiv($(".color-item-12.animal-part"));
+  animateDiv($(".color-item-14.animal-part"));
+  animateDiv($(".color-item-15.animal-part"));
+  animateDiv($(".color-item-16.animal-part"));
+  animateDiv($(".color-item-17.animal-part"));
+  animateDiv($(".color-item-18.animal-part"));
+  animateDiv($(".color-item-19.animal-part"));
+  animateDiv($(".color-item-21.animal-part"));
+  animateDiv($(".color-item-22.animal-part"));
+  animateDiv($(".color-item-23.animal-part"));
+  animateDiv($(".color-item-24.animal-part"));
+  animateDiv($(".color-item-25.animal-part"));
+  animateDiv($(".color-item-27.animal-part"));
+  animateDiv($(".color-item-29.animal-part"));
+  animateDiv($(".color-item-31.animal-part"));
+  animateDiv($(".color-item-32.animal-part"));
+  animateDiv($(".color-item-33.animal-part"));
+  animateDiv($(".color-item-35.animal-part"));
+  animateDiv($(".color-item-36.animal-part"));
+  animateDiv($(".color-item-37.animal-part"));
+  animateDiv($(".color-item-38.animal-part"));
+  animateDiv($(".color-item-40.animal-part"));
+  animateDiv($(".color-item-41.animal-part"));
+  animateDiv($(".color-item-42.animal-part"));
+  animateDiv($(".color-item-43.animal-part"));
+  animateDiv($(".color-item-44.animal-part"));
+  animateDiv($(".color-item-46.animal-part"));
+  animateDiv($(".color-item-47.animal-part"));
+  animateDiv($(".color-item-48.animal-part"));
+  animateDiv($(".color-item-49.animal-part"));
+  animateDiv($(".color-item-53.animal-part"));
+  animateDiv($(".color-item-54.animal-part"));
+  animateDiv($(".color-item-55.animal-part"));
+  animateDiv($(".color-item-56.animal-part"));
+  animateDiv($(".color-item-58.animal-part"));
+  animateDiv($(".color-item-60.animal-part"));
+  animateDiv($(".color-item-61.animal-part"));
+  animateDiv($(".color-item-62.animal-part"));
+  animateDiv($(".color-item-63.animal-part"));
+  animateDiv($(".color-item-66.animal-part"));
+  animateDiv($(".color-item-68.animal-part"));
+  animateDiv($(".color-item-70.animal-part"));
+  animateDiv($(".color-item-72.animal-part"));
+  animateDiv($(".color-item-73.animal-part"));
+  animateDiv($(".color-item-74.animal-part"));
+  animateDiv($(".color-item-75.animal-part"));
+  animateDiv($(".color-item-76.animal-part"));
+  animateDiv($(".color-item-77.animal-part"));
+  animateDiv($(".color-item-79.animal-part"));
+  animateDiv($(".color-item-80.animal-part"));
+  animateDiv($(".color-item-81.animal-part"));
+  animateDiv($(".color-item-82.animal-part"));
+  animateDiv($(".color-item-84.animal-part"));
+  animateDiv($(".color-item-85.animal-part"));
+  animateDiv($(".color-item-86.animal-part"));
+  animateDiv($(".color-item-88.animal-part"));
+  animateDiv($(".color-item-89.animal-part"));
+  animateDiv($(".color-item-91.animal-part"));
+  animateDiv($(".color-item-94.animal-part"));
+  animateDiv($(".color-item-95.animal-part"));
+  animateDiv($(".color-item-96.animal-part"));
+  animateDiv($(".color-item-97.animal-part"));
+  animateDiv($(".color-item-98.animal-part"));
+  animateDiv($(".color-item-99.animal-part"));
+  animateDiv($(".color-item-100.animal-part"));
+  animateDiv($(".color-item-101.animal-part"));
+  animateDiv($(".color-item-102.animal-part"));
+  animateDiv($(".color-item-103.animal-part"));
+  animateDiv($(".color-item-106.animal-part"));
+  animateDiv($(".color-item-107.animal-part"));
+  animateDiv($(".color-item-108.animal-part"));
+  animateDiv($(".color-item-109.animal-part"));
+  animateDiv($(".color-item-110.animal-part"));
+  animateDiv($(".color-item-111.animal-part"));
+  animateDiv($(".color-item-117.animal-part"));
+  animateDiv($(".color-item-121.animal-part"));
+  animateDiv($(".color-item-122.animal-part"));
+  animateDiv($(".color-item-123.animal-part"));
+  animateDiv($(".color-item-126.animal-part"));
+  animateDiv($(".color-item-127.animal-part"));
+  animateDiv($(".color-item-128.animal-part"));
+  animateDiv($(".color-item-129.animal-part"));
+  animateDiv($(".color-item-130.animal-part"));
+  animateDiv($(".color-item-131.animal-part"));
+  animateDiv($(".color-item-132.animal-part"));
+  animateDiv($(".color-item-133.animal-part"));
+  animateDiv($(".color-item-134.animal-part"));
+  animateDiv($(".color-item-135.animal-part"));
+  animateDiv($(".color-item-136.animal-part"));
+  animateDiv($(".color-item-137.animal-part"));
+  animateDiv($(".color-item-138.animal-part"));
+  animateDiv($(".color-item-139.animal-part"));
+  animateDiv($(".color-item-140.animal-part"));
+  animateDiv($(".color-item-142.animal-part"));
+  animateDiv($(".color-item-143.animal-part"));
+  animateDiv($(".color-item-144.animal-part"));
+  animateDiv($(".color-item-145.animal-part"));
+  animateDiv($(".color-item-146.animal-part"));
+  animateDiv($(".color-item-147.animal-part"));
+  animateDiv($(".color-item-149.animal-part"));
+  animateDiv($(".color-item-150.animal-part"));
+  animateDiv($(".color-item-151.animal-part"));
+  animateDiv($(".color-item-152.animal-part"));
+  animateDiv($(".color-item-153.animal-part"));
+  animateDiv($(".color-item-154.animal-part"));
+  animateDiv($(".color-item-155.animal-part"));
+  animateDiv($(".color-item-156.animal-part"));
+  animateDiv($(".color-item-157.animal-part"));
+  animateDiv($(".color-item-158.animal-part"));
+  animateDiv($(".color-item-159.animal-part"));
+  animateDiv($(".color-item-161.animal-part"));
+  animateDiv($(".color-item-162.animal-part"));
+  animateDiv($(".color-item-163.animal-part"));
+  animateDiv($(".color-item-164.animal-part"));
+  animateDiv($(".color-item-165.animal-part"));
+  animateDiv($(".color-item-166.animal-part"));
+  animateDiv($(".color-item-167.animal-part"));
+  animateDiv($(".color-item-168.animal-part"));
+  animateDiv($(".color-item-169.animal-part"));
+  animateDiv($(".color-item-170.animal-part"));
+  animateDiv($(".color-item-171.animal-part"));
+  animateDiv($(".color-item-172.animal-part"));
+  animateDiv($(".color-item-173.animal-part"));
+  animateDiv($(".color-item-174.animal-part"));
+  animateDiv($(".color-item-175.animal-part"));
+  animateDiv($(".color-item-176.animal-part"));
+  animateDiv($(".color-item-177.animal-part"));
+  animateDiv($(".color-item-178.animal-part"));
+  animateDiv($(".color-item-179.animal-part"));
+  animateDiv($(".color-item-180.animal-part"));
+  animateDiv($(".color-item-181.animal-part"));
+  animateDiv($(".color-item-182.animal-part"));
+  animateDiv($(".color-item-183.animal-part"));
+  animateDiv($(".color-item-185.animal-part"));
+  animateDiv($(".color-item-186.animal-part"));
+  animateDiv($(".color-item-187.animal-part"));
+  animateDiv($(".color-item-188.animal-part"));
+  animateDiv($(".color-item-189.animal-part"));
+  animateDiv($(".color-item-190.animal-part"));
+  animateDiv($(".color-item-191.animal-part"));
+  animateDiv($(".color-item-192.animal-part"));
+  animateDiv($(".color-item-193.animal-part"));
+  animateDiv($(".color-item-195.animal-part"));
+  animateDiv($(".color-item-196.animal-part"));
+  animateDiv($(".color-item-197.animal-part"));
+  animateDiv($(".color-item-198.animal-part"));
+  animateDiv($(".color-item-202.animal-part"));
+  animateDiv($(".color-item-233.animal-part"));
+  animateDiv($(".color-item-234.animal-part"));
+  animateDiv($(".color-item-235.animal-part"));
+  animateDiv($(".color-item-248.animal-part"));
+  animateDiv($(".color-item-249.animal-part"));
+  animateDiv($(".color-item-250.animal-part"));
+}
