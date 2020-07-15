@@ -528,6 +528,10 @@ span.color-29::before {
   right: -0.5rem;
 }
 
+.left-link.left-color {
+  left: -2.1rem;
+}
+
 .left-link-inner-wrapper a,
 .right-link-inner-wrapper a {
   padding: 1.5rem 1rem;
@@ -1390,7 +1394,7 @@ span.color-29::before {
 }
 
 /*--- Header ---*/
-.color-header {
+.general-header {
   position: relative;
   width: 100%;
   min-height: 6.4rem;
@@ -1405,7 +1409,7 @@ span.color-29::before {
           justify-content: center;
 }
 
-.color-title-wrapper {
+.general-title-wrapper {
   background: #fffef7;
   position: fixed;
   width: 100%;
@@ -1421,13 +1425,13 @@ span.color-29::before {
           justify-content: center;
 }
 
-.color-title {
+.general-title {
   font-size: 2.4rem;
   font-weight: 300;
   margin: 1.5rem 0rem 2rem 0rem;
 }
 
-.color-title a {
+.general-title a {
   text-decoration: none;
   color: black;
 }
@@ -2821,7 +2825,7 @@ main {
 }
 
 @media screen and (max-width: 882px) {
-  .color-header {
+  .general-header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -2829,7 +2833,7 @@ main {
     z-index: 500;
     margin-bottom: 0rem;
   }
-  .color-title-wrapper {
+  .general-title-wrapper {
     position: fixed;
     background: #fffef7;
   }
@@ -2846,7 +2850,7 @@ main {
 }
 
 @media screen and (max-width: 548px) {
-  .color-title-wrapper {
+  .general-title-wrapper {
     display: none;
   }
   .sort-buttons {
@@ -2857,6 +2861,134 @@ main {
   }
   .sort-none {
     display: none;
+  }
+}
+
+body {
+  min-height: 100vh;
+}
+
+.cover-section {
+  position: relative;
+  margin: auto;
+  min-height: 83vh;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: -1;
+}
+
+.cover-wrapper {
+  width: 100%;
+  margin: auto auto auto auto;
+  padding-bottom: 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cover-wrapper div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0rem 5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cover-wrapper div img {
+  width: 100%;
+}
+
+.cover-wrapper div p {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+}
+
+.info-section {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.info-section p {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.info-section p a {
+  color: #0045ff;
+}
+
+@media screen and (max-width: 1280px) {
+  .cover-section {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cover-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cover-wrapper div {
+    margin: 3rem 0rem;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 548px) {
+  .cover-section {
+    width: 95%;
+  }
+  .cover-wrapper div {
+    margin: 2rem 0rem;
+    width: 75%;
+  }
+  .info-section {
+    width: 85%;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */

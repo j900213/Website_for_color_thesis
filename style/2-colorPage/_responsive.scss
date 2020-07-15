@@ -1,12 +1,12 @@
 @media screen and (max-width: 882px) {
-  .color-header {
+  .general-header {
     flex-direction: column;
 
     z-index: 500;
     //min-height: 10vh;
     margin-bottom: 0rem;
   }
-  .color-title-wrapper {
+  .general-title-wrapper {
     position: fixed;
     background: #fffef7;
   }
@@ -25,7 +25,7 @@
 }
 
 @media screen and (max-width: 548px) {
-  .color-title-wrapper {
+  .general-title-wrapper {
     display: none;
   }
 
