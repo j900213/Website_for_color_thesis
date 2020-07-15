@@ -26,20 +26,7 @@
 
 @media screen and (max-width: 548px) {
   .color-title-wrapper {
-    height: 6.7rem;
     display: none;
-
-    &.mobile {
-      display: flex;
-    }
-  }
-
-  .color-title {
-    font-size: 1.9rem;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
   }
 
   .sort-buttons {

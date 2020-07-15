@@ -17,6 +17,12 @@
   z-index: 10;
 }
 
+/*--- Mobile Header ---*/
+.mobile-fix-header-wrapper,
+.mobile-list {
+  display: none;
+}
+
 /*--- Navigation Head ---*/
 
 .main-title-wrapper {

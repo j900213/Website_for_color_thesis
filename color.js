@@ -17,9 +17,9 @@ const sortNumber = document.querySelector(".sort-number button");
 const sortNone = document.querySelector(".sort-none button");
 
 // Mobile Navigation
-const mobileNav = document.querySelector(".mobile-nav");
 
 // Responsive width
+const mobileList = document.querySelector(".mobile-list");
 let screenWidth = window.matchMedia("(max-width: 548px)");
 
 /*--- Cursor Initilazation ---*/
@@ -86,23 +86,22 @@ sortButtons.forEach((sortButton) => {
 });
 
 /*--- Mobile Dropdown ---*/
-if (screenWidth.matches) {
-  let indicator = false;
-  $(".color-title-wrapper.mobile h1 a").click(function () {
-    $(".mobile-nav").slideToggle("slow");
-    mobileNav.style.display = `flex`;
-    setTimeout(function () {
-      indicator = true;
-    }, 50);
+let indicator = false;
+$(".mobile-title-link-wrapper").click(function () {
+  $(".mobile-list").slideToggle("slow");
+  mobileList.style.display = `flex`;
+  setTimeout(function () {
+    indicator = true;
+  }, 50);
+  indicator = false;
+});
+
+$("body:not(mobile-title-link-wrapper)").click(function () {
+  if (indicator) {
+    $(".mobile-list").slideUp("slow");
     indicator = false;
-  });
-  $("body:not(mobile-nav)").click(function () {
-    if (indicator) {
-      $(".mobile-nav").slideUp("slow");
-      indicator = false;
-    }
-  });
-}
+  }
+});
 
 /*--- Isotope Sorting ---*/
 // Global selection

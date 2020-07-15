@@ -12,11 +12,9 @@ const abstractSec = document.querySelector(".abstract-section");
 const titleStatic = document.querySelector(".main-static");
 const titleSticky = document.querySelector(".main-sticky");
 
-// Mobile Navigation
-const mobileNav = document.querySelector(".mobile-nav");
-const titleLink = document.querySelector(".main-sticky h1 a");
-
 // Responsive width
+const mobileHeader = document.querySelector(".mobile-fix-header-wrapper");
+const mobileList = document.querySelector(".mobile-list");
 let screenWidth = window.matchMedia("(max-width: 548px)");
 
 /*--- Cursor Initilazation ---*/
@@ -61,38 +59,49 @@ links.forEach((link) => {
 });
 
 /*--- Navigation Background ---*/
+// Only works when not in mobile version
 function navBgChange() {
   const abstractPos = abstractSec.getBoundingClientRect().top;
-  if (abstractPos > 0) {
+  let screenWidth = window.matchMedia("(max-width: 548px)");
+
+  if (screenWidth.matches) {
     titleStatic.style.display = `flex`;
     titleSticky.style.display = `none`;
+    if (abstractPos > 0) {
+      titleStatic.style.display = `flex`;
+      mobileHeader.style.display = `none`;
+    } else {
+      titleStatic.style.display = `none`;
+      mobileHeader.style.display = `flex`;
+    }
   } else {
-    titleStatic.style.display = `none`;
-    titleSticky.style.display = `flex`;
-    mobileNav.style.display = `none`;
+    if (abstractPos > 0) {
+      titleStatic.style.display = `flex`;
+      titleSticky.style.display = `none`;
+    } else {
+      titleStatic.style.display = `none`;
+      titleSticky.style.display = `flex`;
+    }
   }
 }
 
 /*--- Mobile Dropdown ---*/
-if (screenWidth.matches) {
-  let indicator = false;
-  $(".main-title-wrapper.main-sticky h1 a").click(function () {
-    $(".mobile-nav").slideToggle("slow");
-    mobileNav.style.display = `flex`;
-    setTimeout(function () {
-      indicator = true;
-    }, 50);
+let indicator = false;
+$(".mobile-title-link-wrapper").click(function () {
+  $(".mobile-list").slideToggle("slow");
+  mobileList.style.display = `flex`;
+  setTimeout(function () {
+    indicator = true;
+  }, 50);
+  indicator = false;
+});
+
+$("body:not(mobile-title-link-wrapper)").click(function () {
+  if (indicator) {
+    $(".mobile-list").slideUp("slow");
     indicator = false;
-  });
-  $("body:not(mobile-nav)").click(function () {
-    if (indicator) {
-      $(".mobile-nav").slideUp("slow");
-      indicator = false;
-    }
-  });
-} else {
-  titleLink.setAttribute("href", "#main");
-}
+  }
+});
 
 /*--- Magic Fireworks ---*/
 for (let i = 0; i < target.length; i++) {
@@ -323,4 +332,5 @@ for (let i = 0; i < target.length; i++) {
 }
 
 initCursor();
+mobileHeader.style.display = `none`;
 window.addEventListener("scroll", navBgChange);
