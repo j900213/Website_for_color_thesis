@@ -293,7 +293,7 @@ span.color-29::before {
 }
 
 .bgcolor-12::after {
-  content: url(../image/circle/.png);
+  content: url(../image/circle/sora.png);
 }
 
 .bgcolor-13::after {
@@ -399,7 +399,7 @@ span.color-29::before {
 .main-section {
   height: 105vh;
   position: relative;
-  background-image: url(../image/bg/colorhero.png);
+  background-image: url(../image/bg/colorhero.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -763,46 +763,46 @@ span.color-29::before {
 
 .bg-ch2-wrapper {
   position: absolute;
-  right: -190rem;
-  top: -110rem;
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
+  right: -110rem;
+  top: -10rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   z-index: -10;
 }
 
 .bg-ch3-wrapper-1 {
   position: absolute;
-  left: -280rem;
-  top: -200rem;
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
+  left: -155rem;
+  top: -87rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   z-index: -10;
 }
 
 .bg-ch3-wrapper-2 {
   position: absolute;
-  left: -260rem;
-  top: -50rem;
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
+  left: -140rem;
+  top: 15rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   z-index: -10;
 }
 
 .bg-ch4-wrapper-1 {
   position: absolute;
-  right: -275rem;
-  top: -170rem;
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
+  right: -153rem;
+  top: -75rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   z-index: -10;
 }
 
 .bg-ch4-wrapper-2 {
   position: absolute;
-  right: -260rem;
-  top: 70rem;
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
+  right: -140rem;
+  top: 90rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   z-index: -10;
 }
 
@@ -817,28 +817,28 @@ span.color-29::before {
 
 .bg-ch5-wrapper-2 {
   position: absolute;
-  left: -173rem;
-  top: -25rem;
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
+  left: -96rem;
+  top: 45rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   z-index: -10;
 }
 
 .bg-ch5-wrapper-3 {
   position: absolute;
-  left: -180rem;
-  bottom: -165rem;
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
+  left: -100rem;
+  bottom: -55rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   z-index: -10;
 }
 
 .bg-conclusion-wrapper-1 {
   position: absolute;
-  right: -180rem;
-  top: -150rem;
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
+  right: -93rem;
+  top: -68rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   z-index: -10;
 }
 
@@ -853,10 +853,10 @@ span.color-29::before {
 
 .bg-conclusion-wrapper-2-tab {
   position: absolute;
-  right: -190rem;
-  bottom: -170rem;
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
+  right: -110rem;
+  bottom: -85rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
   z-index: -10;
 }
 
