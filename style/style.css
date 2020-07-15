@@ -482,6 +482,7 @@ span.color-29::before {
 
 .nav-chapter-wrapper {
   display: inline-block;
+  margin: 0.4rem 0rem;
 }
 
 .nav-chapter-wrapper .nav-chapter-name-wrapper {
@@ -516,7 +517,7 @@ span.color-29::before {
 
 .right-link {
   position: fixed;
-  right: -2rem;
+  right: -2.2rem;
   top: 50%;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
@@ -529,7 +530,7 @@ span.color-29::before {
 }
 
 .left-link.left-color {
-  left: -2.1rem;
+  left: -2.5rem;
 }
 
 .left-link-inner-wrapper a,
@@ -570,7 +571,7 @@ span.color-29::before {
 }
 
 .abstract-section {
-  min-height: 80vh;
+  min-height: 85vh;
   width: 95%;
   margin: auto;
   padding: 1.5rem 25% 8rem 0vw;

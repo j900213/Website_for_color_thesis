@@ -68,6 +68,7 @@
 
 .nav-chapter-wrapper {
   display: inline-block;
+  margin: 0.4rem 0rem;
 
   & .nav-chapter-name-wrapper {
     display: inline-block;
@@ -99,7 +100,7 @@
 
 .right-link {
   position: fixed;
-  right: -2rem;
+  right: -2.2rem;
   top: 50%;
   transform: rotate(-90deg);
   transform-origin: center;
@@ -110,7 +111,7 @@
 }
 
 .left-link.left-color {
-  left: -2.1rem;
+  left: -2.5rem;
 }
 
 .left-link-inner-wrapper a,

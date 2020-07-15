@@ -153,9 +153,9 @@ categoryDivObject.classList.add("category-object");
 categoryDivPlant.classList.add("category-plant");
 
 // Change the title HTML
-categoryDivTech.children[0].innerHTML = "Dye and extract technique";
+categoryDivTech.children[0].innerHTML = "Dye Technique";
 categoryDivMineral.children[0].innerHTML = "Mineral";
-categoryDivObject.children[0].innerHTML = "Suffix";
+categoryDivObject.children[0].innerHTML = "Objects";
 categoryDivPlant.children[0].innerHTML = "Nature";
 
 // Initial hiding

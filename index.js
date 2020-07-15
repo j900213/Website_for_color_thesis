@@ -75,6 +75,7 @@ function navBgChange() {
       mobileHeader.style.display = `flex`;
     }
   } else {
+    mobileHeader.style.display = `none`;
     if (abstractPos > 0) {
       titleStatic.style.display = `flex`;
       titleSticky.style.display = `none`;
