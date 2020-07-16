@@ -220,10 +220,6 @@ span {
 }
 
 // Javascript Action
-// .bgcolor {
-//   position: relative;
-// }
-
 .bgcolor {
   position: relative;
 }
@@ -234,6 +230,7 @@ span {
   right: 0rem;
   transform: translate(35%, -40%);
   z-index: 5;
+  pointer-events: none;
 }
 
 .bgcolor-long:after {

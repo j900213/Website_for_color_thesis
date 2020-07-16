@@ -231,6 +231,7 @@ span.color-29::before {
   -webkit-transform: translate(35%, -40%);
           transform: translate(35%, -40%);
   z-index: 5;
+  pointer-events: none;
 }
 
 .bgcolor-long:after {
