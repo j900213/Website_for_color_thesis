@@ -106,6 +106,131 @@ $("body:not(mobile-title-link-wrapper)").click(function () {
 
 /*--- Magic Fireworks ---*/
 for (let i = 0; i < target.length; i++) {
+  target[i].parentNode.classList.add("bgcolor");
+  switch (i + 1) {
+    case 1:
+      target[i].parentNode.classList.add("bgcolor-1");
+      target[i].parentNode.classList.remove("bgcolor-1");
+      break;
+    case 2:
+      target[i].parentNode.classList.add("bgcolor-2");
+      target[i].parentNode.classList.remove("bgcolor-2");
+      break;
+    case 3:
+      target[i].parentNode.classList.add("bgcolor-3");
+      target[i].parentNode.classList.remove("bgcolor-3");
+      break;
+    case 4:
+      target[i].parentNode.classList.add("bgcolor-4");
+      target[i].parentNode.classList.remove("bgcolor-4");
+      break;
+    case 5:
+      target[i].parentNode.classList.add("bgcolor-5");
+      target[i].parentNode.classList.remove("bgcolor-5");
+      break;
+    case 6:
+      target[i].parentNode.classList.add("bgcolor-6");
+      target[i].parentNode.classList.remove("bgcolor-6");
+      break;
+    case 7:
+      target[i].parentNode.classList.add("bgcolor-7");
+      target[i].parentNode.classList.remove("bgcolor-7");
+      break;
+    case 8:
+      target[i].parentNode.classList.add("bgcolor-8");
+      target[i].parentNode.classList.remove("bgcolor-8");
+      break;
+    case 9:
+      target[i].parentNode.classList.add("bgcolor-9");
+      target[i].parentNode.classList.remove("bgcolor-9");
+      break;
+    case 10:
+      target[i].parentNode.classList.add("bgcolor-10");
+      target[i].parentNode.classList.remove("bgcolor-10");
+      break;
+    case 11:
+      target[i].parentNode.classList.add("bgcolor-11");
+      target[i].parentNode.classList.remove("bgcolor-11");
+      break;
+    case 12:
+      target[i].parentNode.classList.add("bgcolor-12");
+      target[i].parentNode.classList.remove("bgcolor-12");
+      break;
+    case 13:
+      target[i].parentNode.classList.add("bgcolor-13");
+      target[i].parentNode.classList.remove("bgcolor-13");
+      break;
+    case 14:
+      target[i].parentNode.classList.add("bgcolor-14");
+      target[i].parentNode.classList.remove("bgcolor-14");
+      break;
+    case 15:
+      target[i].parentNode.classList.add("bgcolor-15");
+      target[i].parentNode.classList.remove("bgcolor-15");
+      break;
+    case 16:
+      target[i].parentNode.classList.add("bgcolor-16");
+      target[i].parentNode.classList.remove("bgcolor-16");
+      break;
+    case 17:
+      target[i].parentNode.classList.add("bgcolor-17");
+      target[i].parentNode.classList.remove("bgcolor-17");
+      break;
+    case 18:
+      target[i].parentNode.classList.add("bgcolor-18");
+      target[i].parentNode.classList.remove("bgcolor-18");
+      break;
+    case 19:
+      target[i].parentNode.classList.add("bgcolor-19");
+      target[i].parentNode.classList.remove("bgcolor-19");
+      break;
+    case 20:
+      target[i].parentNode.classList.add("bgcolor-20");
+      target[i].parentNode.classList.remove("bgcolor-20");
+      break;
+    case 21:
+      target[i].parentNode.classList.add("bgcolor-21");
+      target[i].parentNode.classList.remove("bgcolor-21");
+      break;
+    case 22:
+      target[i].parentNode.classList.add("bgcolor-22");
+      target[i].parentNode.classList.remove("bgcolor-22");
+      break;
+    case 23:
+      target[i].parentNode.classList.add("bgcolor-23");
+      target[i].parentNode.classList.remove("bgcolor-23");
+      break;
+    case 24:
+      target[i].parentNode.classList.add("bgcolor-24");
+      target[i].parentNode.classList.remove("bgcolor-24");
+      break;
+    case 25:
+      target[i].parentNode.classList.add("bgcolor-25");
+      target[i].parentNode.classList.remove("bgcolor-25");
+      break;
+    case 26:
+      target[i].parentNode.classList.add("bgcolor-26");
+      target[i].parentNode.classList.remove("bgcolor-26");
+      break;
+    case 27:
+      target[i].parentNode.classList.add("bgcolor-27");
+      target[i].parentNode.classList.remove("bgcolor-27");
+      break;
+    case 28:
+      target[i].parentNode.classList.add("bgcolor-28");
+      target[i].parentNode.classList.remove("bgcolor-28");
+      break;
+    case 29:
+      target[i].parentNode.classList.add("bgcolor-29");
+      target[i].parentNode.classList.remove("bgcolor-29");
+      break;
+    default:
+      break;
+  }
+  target[i].parentNode.classList.remove("bgcolor");
+}
+
+for (let i = 0; i < target.length; i++) {
   // Add bg when hovering
   target[i].addEventListener("mouseenter", function () {
     target[i].parentNode.classList.add("bgcolor");

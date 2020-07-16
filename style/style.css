@@ -482,7 +482,7 @@ span.color-29::before {
 
 .nav-chapter-wrapper {
   display: inline-block;
-  margin: 0.4rem 0rem;
+  margin: 0.7rem 0rem;
 }
 
 .nav-chapter-wrapper .nav-chapter-name-wrapper {
@@ -2872,7 +2872,7 @@ body {
 .cover-section {
   position: relative;
   margin: auto;
-  min-height: 83vh;
+  min-height: 81.5vh;
   width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2976,6 +2976,9 @@ body {
   .cover-wrapper div {
     margin: 3rem 0rem;
     width: 50%;
+  }
+  .info-section {
+    text-align: center;
   }
 }
 
