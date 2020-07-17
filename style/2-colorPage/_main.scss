@@ -1,3 +1,23 @@
+/*--- Waiting Symbol ---*/
+.waiting-symbol {
+  position: absolute;
+  z-index: 2000;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  //display: none;
+  top: 0%;
+  left: 0%;
+  background: #fffef7;
+
+  & img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 /*--- Header ---*/
 .general-header {
   position: relative;

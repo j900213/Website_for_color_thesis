@@ -25,6 +25,9 @@
 }
 
 @media screen and (max-width: 548px) {
+  .waiting-symbol {
+    display: none;
+  }
   .general-title-wrapper {
     display: none;
   }
